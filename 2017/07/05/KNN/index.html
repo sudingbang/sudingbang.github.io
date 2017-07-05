@@ -99,7 +99,7 @@
 <meta property="og:url" content="https://donggn.github.io/2017/07/05/kNN/index.html">
 <meta property="og:site_name" content="dongg">
 <meta property="og:description" content="k近邻算法：在给定一个训练数据集，对新的输入实例，在训练数据集中找到与该实例最邻近的k个实例，这k个实例的多数属于某个类，就把输入实例分为这个类。下面简述k近邻算法。 输入:训练数据集$$T={(x_1,y_1),(x_2,y_2),···,(x_n,y_n)}$$其中$$x_i\in{X}\subseteq{R^n} 为实例的特征向量,y_i\in{Y}={c_1,c_2,···,c_k}为实例">
-<meta property="og:updated_time" content="2017-07-05T07:57:42.164Z">
+<meta property="og:updated_time" content="2017-07-05T08:11:38.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="K近邻算法">
 <meta name="twitter:description" content="k近邻算法：在给定一个训练数据集，对新的输入实例，在训练数据集中找到与该实例最邻近的k个实例，这k个实例的多数属于某个类，就把输入实例分为这个类。下面简述k近邻算法。 输入:训练数据集$$T={(x_1,y_1),(x_2,y_2),···,(x_n,y_n)}$$其中$$x_i\in{X}\subseteq{R^n} 为实例的特征向量,y_i\in{Y}={c_1,c_2,···,c_k}为实例">
@@ -701,6 +701,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
