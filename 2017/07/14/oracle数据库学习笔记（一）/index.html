@@ -1,0 +1,789 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="oracle数据库是甲骨文公司的一款关系数据库管理系统，其实之前就有学习过sql server数据库，知道数据库的一些基本用法，在学习oracle的时候，发现有一些不同，下面是我学习oracle数据库的笔记。 首先，在oracle安装完成后，会自动提供一个sqlplus命令可以直接运行，我在学习oracle数据库时，都是使用sqlplus来执行oracle命令。 数据库的基本组成是数据表，我在学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle数据库学习笔记(一)">
+<meta property="og:url" content="https://donggn.github.io/2017/07/14/oracle数据库学习笔记（一）/index.html">
+<meta property="og:site_name" content="dongg">
+<meta property="og:description" content="oracle数据库是甲骨文公司的一款关系数据库管理系统，其实之前就有学习过sql server数据库，知道数据库的一些基本用法，在学习oracle的时候，发现有一些不同，下面是我学习oracle数据库的笔记。 首先，在oracle安装完成后，会自动提供一个sqlplus命令可以直接运行，我在学习oracle数据库时，都是使用sqlplus来执行oracle命令。 数据库的基本组成是数据表，我在学习">
+<meta property="og:image" content="http://ot2lgrdzd.bkt.clouddn.com/%E6%80%BB%E8%A1%A8.png">
+<meta property="og:image" content="http://ot2lgrdzd.bkt.clouddn.com/%E6%A0%BC%E5%BC%8F%E5%8C%96.png">
+<meta property="og:image" content="http://ot2lgrdzd.bkt.clouddn.com/COL.png">
+<meta property="og:image" content="http://ot2lgrdzd.bkt.clouddn.com/DEPT.png">
+<meta property="og:updated_time" content="2017-07-17T06:55:18.389Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle数据库学习笔记(一)">
+<meta name="twitter:description" content="oracle数据库是甲骨文公司的一款关系数据库管理系统，其实之前就有学习过sql server数据库，知道数据库的一些基本用法，在学习oracle的时候，发现有一些不同，下面是我学习oracle数据库的笔记。 首先，在oracle安装完成后，会自动提供一个sqlplus命令可以直接运行，我在学习oracle数据库时，都是使用sqlplus来执行oracle命令。 数据库的基本组成是数据表，我在学习">
+<meta name="twitter:image" content="http://ot2lgrdzd.bkt.clouddn.com/%E6%80%BB%E8%A1%A8.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://donggn.github.io/2017/07/14/oracle数据库学习笔记（一）/"/>
+
+
+
+
+
+  <title>oracle数据库学习笔记(一) | dongg</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">dongg</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://donggn.github.io/2017/07/14/oracle数据库学习笔记（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/image/cat.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dongg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">oracle数据库学习笔记(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-14T15:14:13+08:00">
+                2017-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>oracle数据库是甲骨文公司的一款关系数据库管理系统，其实之前就有学习过sql server数据库，知道数据库的一些基本用法，在学习oracle的时候，发现有一些不同，下面是我学习oracle数据库的笔记。</p>
+<p>首先，在oracle安装完成后，会自动提供一个sqlplus命令可以直接运行，我在学习oracle数据库时，都是使用sqlplus来执行oracle命令。</p>
+<p>数据库的基本组成是数据表，我在学习过程中都是用到几个常用的数据表，比如emp、dept、salgrade等等，等下下面会有提到。</p>
+<h2 id="格式化的代码"><a href="#格式化的代码" class="headerlink" title="格式化的代码"></a>格式化的代码</h2><h3 id="首先查看emp表的内容代码如下"><a href="#首先查看emp表的内容代码如下" class="headerlink" title="首先查看emp表的内容代码如下"></a>首先查看emp表的内容代码如下</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp;</div></pre></td></tr></table></figure>
+<p><img src="http://ot2lgrdzd.bkt.clouddn.com/%E6%80%BB%E8%A1%A8.png" alt="总表"></p>
+<p>观察结果看起来不符合预期要求，需要调整一下每行显示的数据长度以及调整命令行的字体大小跟布局。</p>
+<h3 id="调整每行显示的数据长度代码如下"><a href="#调整每行显示的数据长度代码如下" class="headerlink" title="调整每行显示的数据长度代码如下"></a>调整每行显示的数据长度代码如下</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> LINESIZE <span class="number">300</span></div></pre></td></tr></table></figure>
+<h3 id="设置每页显示的数据行数代码如下"><a href="#设置每页显示的数据行数代码如下" class="headerlink" title="设置每页显示的数据行数代码如下"></a>设置每页显示的数据行数代码如下</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> PAGESIZE <span class="number">30</span></div></pre></td></tr></table></figure>
+<p>上面两个指令称为格式化指令。</p>
+<p><img src="http://ot2lgrdzd.bkt.clouddn.com/%E6%A0%BC%E5%BC%8F%E5%8C%96.png" alt="格式化后的表"></p>
+<p>除此之外，观察结果会发现有些类别的数据存在很多空格</p>
+<h3 id="可以通过下面这个命令来删除空格"><a href="#可以通过下面这个命令来删除空格" class="headerlink" title="可以通过下面这个命令来删除空格"></a>可以通过下面这个命令来删除空格</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">COL 类名 FOR AN</div></pre></td></tr></table></figure>
+<p>这里的N为要保留的字符个数，比如删除ENAME上多余的空格，保留六个字符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">COL ENAME FOR A6</div></pre></td></tr></table></figure>
+<p>会得到这样的一个结果</p>
+<p><img src="http://ot2lgrdzd.bkt.clouddn.com/COL.png" alt="删除空格之后的表"></p>
+<h2 id="通过SQLPLUS创建sql文件"><a href="#通过SQLPLUS创建sql文件" class="headerlink" title="通过SQLPLUS创建sql文件"></a>通过SQLPLUS创建sql文件</h2><p>在window系统下，可以通过下面这个命令创建一个.sql文件，然后可以在.sql文件中编写代码。</p>
+<h4 id="创建一个admin-sql文件的命令"><a href="#创建一个admin-sql文件的命令" class="headerlink" title="创建一个admin.sql文件的命令"></a>创建一个admin.sql文件的命令</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ed admin</div></pre></td></tr></table></figure>
+<h4 id="可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称"><a href="#可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称" class="headerlink" title="可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称"></a>可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称</h4><h5 id="比如文件名为admin，可以执行文件程序"><a href="#比如文件名为admin，可以执行文件程序" class="headerlink" title="比如文件名为admin，可以执行文件程序"></a>比如文件名为admin，可以执行文件程序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@文件路径\admin</div></pre></td></tr></table></figure>
+<h4 id="在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户"><a href="#在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户" class="headerlink" title="在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户"></a>在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CONN 用户名/密码 [AS SYSDBA]</div></pre></td></tr></table></figure>
+<p>在sys用户下需要在后面加上语句 [AS SYSDBA]，因为sys用户的权限是最大的，需要超级管理员才可以登陆。</p>
+<h4 id="登陆之后可以通过下面这个命令查看登录用户"><a href="#登陆之后可以通过下面这个命令查看登录用户" class="headerlink" title="登陆之后可以通过下面这个命令查看登录用户"></a>登陆之后可以通过下面这个命令查看登录用户</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SHOW</span> <span class="keyword">USER</span></div></pre></td></tr></table></figure>
+<h4 id="调用本机DOS命令，在前面加一个HOST"><a href="#调用本机DOS命令，在前面加一个HOST" class="headerlink" title="调用本机DOS命令，在前面加一个HOST"></a>调用本机DOS命令，在前面加一个HOST</h4><h5 id="例如调用copy命令"><a href="#例如调用copy命令" class="headerlink" title="例如调用copy命令"></a>例如调用copy命令</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">host copy 文件路径\文件名 文件路径\文件名</div></pre></td></tr></table></figure>
+<h2 id="DML（数据操作语言）"><a href="#DML（数据操作语言）" class="headerlink" title="DML（数据操作语言）"></a>DML（数据操作语言）</h2><p>主要指的是数据库的<strong>查询</strong>与<strong>更新</strong>操作</p>
+<h3 id="查询操作"><a href="#查询操作" class="headerlink" title="查询操作"></a>查询操作</h3><h5 id="查看一个表的结构"><a href="#查看一个表的结构" class="headerlink" title="查看一个表的结构"></a>查看一个表的结构</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DESC 表名称</div></pre></td></tr></table></figure>
+<p>比如查看dept表的结构</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DESC dept</div></pre></td></tr></table></figure>
+<p>会显示</p>
+<p><img src="http://ot2lgrdzd.bkt.clouddn.com/DEPT.png" alt="删除空格之后的表"></p>
+<h5 id="观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表"><a href="#观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表" class="headerlink" title="观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表"></a>观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表</h5><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NUMBER(n)</td>
+<td>最多由n位数字组成</td>
+</tr>
+<tr>
+<td>VARCHAR2(n)</td>
+<td>最多由n个字符组成</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>日期格式的数据</td>
+</tr>
+<tr>
+<td>NUMBER(n,m)</td>
+<td>小数点最多占m位，整数占n位</td>
+</tr>
+</tbody>
+</table>
+<h4 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h4><h5 id="1、删除重复的数据，通过-DISTINCT"><a href="#1、删除重复的数据，通过-DISTINCT" class="headerlink" title="1、删除重复的数据，通过[DISTINCT]"></a>1、删除重复的数据，通过[DISTINCT]</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> [<span class="keyword">DISTINCT</span>] 列名 <span class="keyword">FROM</span> 表名;</div></pre></td></tr></table></figure>
+<p>如果查询为多个列，只有在多个列都相同的时候才会消除。</p>
+<h5 id="2、可以针对查询列的返回结果进行四则运算"><a href="#2、可以针对查询列的返回结果进行四则运算" class="headerlink" title="2、可以针对查询列的返回结果进行四则运算"></a>2、可以针对查询列的返回结果进行四则运算</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 列名+-*/ <span class="keyword">FROM</span> 表名;</div></pre></td></tr></table></figure>
+<h6 id="（1）比如查询每个雇员的基本年薪"><a href="#（1）比如查询每个雇员的基本年薪" class="headerlink" title="（1）比如查询每个雇员的基本年薪"></a>（1）比如查询每个雇员的基本年薪</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> sal*<span class="number">12</span> <span class="keyword">FROM</span> emp;</div></pre></td></tr></table></figure>
+<h6 id="（2）可以更改返回的查询结果名字"><a href="#（2）可以更改返回的查询结果名字" class="headerlink" title="（2）可以更改返回的查询结果名字"></a>（2）可以更改返回的查询结果名字</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> sal*<span class="number">12</span> income <span class="keyword">FROM</span> emp;</div></pre></td></tr></table></figure>
+<h5 id="3、使用-来连接查询结果"><a href="#3、使用-来连接查询结果" class="headerlink" title="3、使用||来连接查询结果"></a>3、使用||来连接查询结果</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 列名||列名 <span class="keyword">from</span> emp;</div></pre></td></tr></table></figure>
+<h4 id="限定查询"><a href="#限定查询" class="headerlink" title="限定查询"></a>限定查询</h4><h5 id="1、关系运算符-gt-、-lt-、-gt-、-lt-、-lt-gt"><a href="#1、关系运算符-gt-、-lt-、-gt-、-lt-、-lt-gt" class="headerlink" title="1、关系运算符: &gt;、&lt;、&gt;=、&lt;=、&lt;&gt;(!=)"></a>1、关系运算符: &gt;、&lt;、&gt;=、&lt;=、&lt;&gt;(!=)</h5><h6 id="（1）比如查询雇员工资高于1500"><a href="#（1）比如查询雇员工资高于1500" class="headerlink" title="（1）比如查询雇员工资高于1500"></a>（1）比如查询雇员工资高于1500</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> sal&gt;<span class="number">1500</span>;</div></pre></td></tr></table></figure>
+<h6 id="（2）查询smith的基本信息"><a href="#（2）查询smith的基本信息" class="headerlink" title="（2）查询smith的基本信息"></a>（2）查询smith的基本信息</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> ENAME=<span class="string">'SMITH'</span>;</div></pre></td></tr></table></figure>
+<h5 id="2、逻辑运算符：AND、OR、NOT"><a href="#2、逻辑运算符：AND、OR、NOT" class="headerlink" title="2、逻辑运算符：AND、OR、NOT"></a>2、逻辑运算符：AND、OR、NOT</h5><h6 id="（1）查询工资在1500-2000的雇员信息"><a href="#（1）查询工资在1500-2000的雇员信息" class="headerlink" title="（1）查询工资在1500-2000的雇员信息"></a>（1）查询工资在1500-2000的雇员信息</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> sal&gt;<span class="number">1500</span> <span class="keyword">AND</span> sal&lt;<span class="number">2000</span>;</div></pre></td></tr></table></figure>
+<h6 id="（2）查询工资小于2000的雇员信息"><a href="#（2）查询工资小于2000的雇员信息" class="headerlink" title="（2）查询工资小于2000的雇员信息"></a>（2）查询工资小于2000的雇员信息</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> <span class="keyword">NOT</span> sal&gt;<span class="number">2000</span>;</div></pre></td></tr></table></figure>
+<h5 id="3、范围运算符：BETWEEN…AND，-IN-NOT-IN"><a href="#3、范围运算符：BETWEEN…AND，-IN-NOT-IN" class="headerlink" title="3、范围运算符：BETWEEN…AND， IN ,NOT IN"></a>3、范围运算符：BETWEEN…AND， IN ,NOT IN</h5><h6 id="（1）上面的查询工资在1500-2000的雇员信息还可以这样"><a href="#（1）上面的查询工资在1500-2000的雇员信息还可以这样" class="headerlink" title="（1）上面的查询工资在1500-2000的雇员信息还可以这样"></a>（1）上面的查询工资在1500-2000的雇员信息还可以这样</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> sal <span class="keyword">BETWEEN</span> <span class="number">1500</span> <span class="keyword">AND</span> <span class="number">2000</span>;</div></pre></td></tr></table></figure>
+<h6 id="（2）查询编号为7369、7566、7788的雇员信息"><a href="#（2）查询编号为7369、7566、7788的雇员信息" class="headerlink" title="（2）查询编号为7369、7566、7788的雇员信息"></a>（2）查询编号为7369、7566、7788的雇员信息</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> EMPNO <span class="keyword">IN</span> (<span class="number">7369</span>，<span class="number">7566</span>，<span class="number">7788</span>);</div></pre></td></tr></table></figure>
+<h5 id="4、空运算判断：IS-NULL-IS-NOT-NULL"><a href="#4、空运算判断：IS-NULL-IS-NOT-NULL" class="headerlink" title="4、空运算判断：IS NULL,IS NOT NULL"></a>4、空运算判断：IS NULL,IS NOT NULL</h5><h6 id="（1）查询所有领取佣金的雇员信息（佣金存在，不为空）"><a href="#（1）查询所有领取佣金的雇员信息（佣金存在，不为空）" class="headerlink" title="（1）查询所有领取佣金的雇员信息（佣金存在，不为空）"></a>（1）查询所有领取佣金的雇员信息（佣金存在，不为空）</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> <span class="keyword">NOT</span> comm <span class="keyword">IS</span> <span class="literal">NULL</span>;</div></pre></td></tr></table></figure>
+<h5 id="5、模糊查询：LIKE"><a href="#5、模糊查询：LIKE" class="headerlink" title="5、模糊查询：LIKE"></a>5、模糊查询：LIKE</h5><h6 id="（1）下划线“-”：匹配任意一位字符。"><a href="#（1）下划线“-”：匹配任意一位字符。" class="headerlink" title="（1）下划线“_”：匹配任意一位字符。"></a>（1）下划线“_”：匹配任意一位字符。</h6><p>查询姓名第二位为A的雇员信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> ENAME <span class="keyword">LIKE</span> <span class="string">'_A%'</span></div></pre></td></tr></table></figure>
+<h6 id="（2）“-”：匹配任意的零位、一位或多位字符。"><a href="#（2）“-”：匹配任意的零位、一位或多位字符。" class="headerlink" title="（2）“%”：匹配任意的零位、一位或多位字符。"></a>（2）“%”：匹配任意的零位、一位或多位字符。</h6><p>查询姓名是以字母A开头的雇员信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> ENAME <span class="keyword">LIKE</span> <span class="string">'A%'</span>;</div></pre></td></tr></table></figure>
+<p>查询姓名中有A的雇员信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> ENAME <span class="keyword">LIKE</span> <span class="string">'%A%'</span>;</div></pre></td></tr></table></figure>
+<h4 id="查询排序"><a href="#查询排序" class="headerlink" title="查询排序"></a>查询排序</h4><p>通过ORDER BY 来进行排序，通过ASC|DESC来选择排序还是降序，默认为ASC（升序）</p>
+<p>其中ORDER BY 排序的字段可以是自己定义的别名</p>
+<h5 id="（1）查询所有雇员信息，要去按照工资由高到低排列（降序）"><a href="#（1）查询所有雇员信息，要去按照工资由高到低排列（降序）" class="headerlink" title="（1）查询所有雇员信息，要去按照工资由高到低排列（降序）"></a>（1）查询所有雇员信息，要去按照工资由高到低排列（降序）</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">ORDER</span> <span class="keyword">BY</span> sal <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<h5 id="（2）要求查询工资由高到低排序，如果工资相同，则按雇佣日期由早到晚排序"><a href="#（2）要求查询工资由高到低排序，如果工资相同，则按雇佣日期由早到晚排序" class="headerlink" title="（2）要求查询工资由高到低排序，如果工资相同，则按雇佣日期由早到晚排序"></a>（2）要求查询工资由高到低排序，如果工资相同，则按雇佣日期由早到晚排序</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">ORDER</span> <span class="keyword">BY</span> SAL <span class="keyword">DESC</span>,HIREDATE;</div></pre></td></tr></table></figure>
+<h3 id="单行函数"><a href="#单行函数" class="headerlink" title="单行函数"></a>单行函数</h3><p>所谓的单行函数就是实现某一具体功能的函数，比如转化大小写，进行日期格式转换等等</p>
+<h4 id="1、字符串函数"><a href="#1、字符串函数" class="headerlink" title="1、字符串函数"></a>1、字符串函数</h4><h5 id="（1）UPPER-LOWER函数"><a href="#（1）UPPER-LOWER函数" class="headerlink" title="（1）UPPER,LOWER函数"></a>（1）UPPER,LOWER函数</h5><h6 id="由用户输入雇员姓名，而后显示雇员的完整信息"><a href="#由用户输入雇员姓名，而后显示雇员的完整信息" class="headerlink" title="由用户输入雇员姓名，而后显示雇员的完整信息"></a>由用户输入雇员姓名，而后显示雇员的完整信息</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> ename=<span class="keyword">UPPER</span>(<span class="string">'&amp;inputname'</span>);</div></pre></td></tr></table></figure>
+<h5 id="（2）INITCAP函数（将数据转为开头首字母大写，其他小写）"><a href="#（2）INITCAP函数（将数据转为开头首字母大写，其他小写）" class="headerlink" title="（2）INITCAP函数（将数据转为开头首字母大写，其他小写）"></a>（2）INITCAP函数（将数据转为开头首字母大写，其他小写）</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> INITCAP(ENAME) <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
+<h5 id="（3）LENGTH函数（取得字符串长度）"><a href="#（3）LENGTH函数（取得字符串长度）" class="headerlink" title="（3）LENGTH函数（取得字符串长度）"></a>（3）LENGTH函数（取得字符串长度）</h5><h6 id="查询姓名长度为5个雇员信息"><a href="#查询姓名长度为5个雇员信息" class="headerlink" title="查询姓名长度为5个雇员信息"></a>查询姓名长度为5个雇员信息</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> <span class="keyword">LENGTH</span>(ENAME)=<span class="number">5</span>;</div></pre></td></tr></table></figure>
+<h5 id="（4）SUBSTR函数（字符串截取）"><a href="#（4）SUBSTR函数（字符串截取）" class="headerlink" title="（4）SUBSTR函数（字符串截取）"></a>（4）SUBSTR函数（字符串截取）</h5><h6 id="比如对helloworld进行截取，截取后面5个"><a href="#比如对helloworld进行截取，截取后面5个" class="headerlink" title="比如对helloworld进行截取，截取后面5个"></a>比如对helloworld进行截取，截取后面5个</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUBSTR</span>(<span class="string">'helloworld'</span>,<span class="number">6</span>) <span class="keyword">from</span> dual;</div></pre></td></tr></table></figure>
+<h6 id="也可以截取第1位到第4位"><a href="#也可以截取第1位到第4位" class="headerlink" title="也可以截取第1位到第4位"></a>也可以截取第1位到第4位</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUBSTR</span>(<span class="string">'helloworld'</span>,<span class="number">1</span>,<span class="number">4</span>) <span class="keyword">from</span> dual;</div></pre></td></tr></table></figure>
+<h4 id="2、数值函数"><a href="#2、数值函数" class="headerlink" title="2、数值函数"></a>2、数值函数</h4><h5 id="（1）ROUND-数据的四舍五入"><a href="#（1）ROUND-数据的四舍五入" class="headerlink" title="（1）ROUND(数据的四舍五入)"></a>（1）ROUND(数据的四舍五入)</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ROUND</span>(<span class="number">798.5489</span>,<span class="number">2</span>) <span class="keyword">FROM</span> dual ;</div></pre></td></tr></table></figure>
+<p>这里的2是在第二位小数点实现四舍五入，这里输出的而是<strong>798.55</strong>，</p>
+<h5 id="（2）TRUNC-数据的截取"><a href="#（2）TRUNC-数据的截取" class="headerlink" title="（2）TRUNC(数据的截取)"></a>（2）TRUNC(数据的截取)</h5><p>TRUNC的用法跟ROUND很相似，其实ROUND就有点截取的意思，但是TRUNC不会像四舍五入那样进位</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> TRUNC(<span class="number">798.5489</span>,<span class="number">2</span>) <span class="keyword">FROM</span> dual;</div></pre></td></tr></table></figure>
+<p>这里输出的是<strong>798.54</strong></p>
+<h5 id="（3）MOD（求模，计算余数）"><a href="#（3）MOD（求模，计算余数）" class="headerlink" title="（3）MOD（求模，计算余数）"></a>（3）MOD（求模，计算余数）</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MOD</span>(<span class="number">10</span>,<span class="number">3</span>) <span class="keyword">FROM</span> dual;</div></pre></td></tr></table></figure>
+<h4 id="3、日期函数"><a href="#3、日期函数" class="headerlink" title="3、日期函数"></a>3、日期函数</h4><h5 id="要计算日期，首先要查询现在的日期"><a href="#要计算日期，首先要查询现在的日期" class="headerlink" title="要计算日期，首先要查询现在的日期"></a>要计算日期，首先要查询现在的日期</h5><p>通过这个语句来得到现在的日期</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SYSDATE</span> <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
+<h5 id="1-ADD-MONTHS"><a href="#1-ADD-MONTHS" class="headerlink" title="(1) ADD_MONTHS"></a>(1) ADD_MONTHS</h5><p>在指定的日期上增加若干个月之后的日期,下面命令是增加四个月之后的日期</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ADD_MONTHS(<span class="keyword">SYSDATE</span>,<span class="number">4</span>) <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
+<h5 id="（2）MONTHS-BETWEEN"><a href="#（2）MONTHS-BETWEEN" class="headerlink" title="（2）MONTHS_BETWEEN"></a>（2）MONTHS_BETWEEN</h5><p>返回两个日期之间所经历的月数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> MONTHS_BETWEEN(<span class="keyword">SYSDATE</span>,HIREDATE) <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
+<h5 id="（3）LAST-DAY"><a href="#（3）LAST-DAY" class="headerlink" title="（3）LAST_DAY"></a>（3）LAST_DAY</h5><p>取得指定日期所在月的最后一天日期</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">LAST_DAY</span>(<span class="keyword">SYSDATE</span>) <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
+<p>比如查询所有雇佣日期在月倒数第三天的雇员信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> HIREDATE=<span class="keyword">LAST_DAY</span>(HIREDATE)<span class="number">-2</span>;</div></pre></td></tr></table></figure>
+<h5 id="（4）NEXT-DAY"><a href="#（4）NEXT-DAY" class="headerlink" title="（4）NEXT_DAY"></a>（4）NEXT_DAY</h5><p>返回下一个指定的一周时间数所对应的日期，比如指定周二，会返回下周二的日期</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> NEXT_DAY(<span class="keyword">SYSDATE</span>,<span class="string">'星期二'</span>) <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
+<h5 id="（5）查询每位雇员被雇佣到现在的时间（年月日）"><a href="#（5）查询每位雇员被雇佣到现在的时间（年月日）" class="headerlink" title="（5）查询每位雇员被雇佣到现在的时间（年月日）"></a>（5）查询每位雇员被雇佣到现在的时间（年月日）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">TRUNC(MONTHS_BETWEEN(SYSDATE,HIREDATE)/12)  ||&apos;年&apos;|| </div><div class="line">TRUNC(MOD(MONTHS_BETWEEN(SYSDATE,HIREDATE),12)) ||&apos;月&apos;|| </div><div class="line">TRUNC(SYSDATE-ADD_MONTHS(HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE))) ||&apos;天&apos; sum</div><div class="line">FROM EMP;</div></pre></td></tr></table></figure>
+<h4 id="4、转换函数"><a href="#4、转换函数" class="headerlink" title="4、转换函数"></a>4、转换函数</h4><h5 id="（1）TO-CHAR"><a href="#（1）TO-CHAR" class="headerlink" title="（1）TO_CHAR()"></a>（1）TO_CHAR()</h5><p>TO_CHAR()可以将日期或数字转为字符串，例如将日期格式化</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 	TO_CHAR(<span class="keyword">SYSDATE</span>,<span class="string">'yyyy-mm-dd hh24:mi:ss'</span>) <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
+<p>将数字格式化</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> TO_CHAR(<span class="number">2288866442</span>,<span class="string">'L999,999,999,999'</span>) <span class="keyword">FROM</span> dual;</div></pre></td></tr></table></figure>
+<h5 id="（2）TO-DATE"><a href="#（2）TO-DATE" class="headerlink" title="（2）TO_DATE()"></a>（2）TO_DATE()</h5><p>TO_DATE()跟TO_CHAR()的将日期转为字符串相反，TO_DATE()是将字符串转为日期，例如</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">TO_DATE</span>(<span class="string">'1999-12-12'</span>,<span class="string">'yyyy-mm-dd'</span>) <span class="keyword">from</span> dual;</div></pre></td></tr></table></figure>
+<h4 id="5、通用函数"><a href="#5、通用函数" class="headerlink" title="5、通用函数"></a>5、通用函数</h4><h5 id="（1）NVL"><a href="#（1）NVL" class="headerlink" title="（1）NVL()"></a>（1）NVL()</h5><p>NVL可以对空值进行处理，比如转换为0</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> NVL(COMM,<span class="number">0</span>) <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
+<p>他的格式是这样的 ：NVL(要转换的变量,要转换的数值)</p>
+<h5 id="（2）DECODE"><a href="#（2）DECODE" class="headerlink" title="（2）DECODE()"></a>（2）DECODE()</h5><p>DECODE函数像是一个if-else函数，它的用法如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> JOB,<span class="keyword">DECODE</span>(JOB,<span class="string">'CLERK'</span>，<span class="string">'检查'</span>,<span class="string">'SALESMAN'</span>,<span class="string">'销售'</span>,<span class="string">'---'</span>) <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
+<p> 以上是我观看<strong>李兴华</strong>老师的<strong>Oracle从入门到精通</strong>课程的学习笔记，接下来还会继续学习。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/08/决策树/" rel="next" title="决策树">
+                <i class="fa fa-chevron-left"></i> 决策树
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/image/cat.png"
+               alt="dong" />
+          <p class="site-author-name" itemprop="name">dong</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化的代码"><span class="nav-number">1.</span> <span class="nav-text">格式化的代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#首先查看emp表的内容代码如下"><span class="nav-number">1.1.</span> <span class="nav-text">首先查看emp表的内容代码如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调整每行显示的数据长度代码如下"><span class="nav-number">1.2.</span> <span class="nav-text">调整每行显示的数据长度代码如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置每页显示的数据行数代码如下"><span class="nav-number">1.3.</span> <span class="nav-text">设置每页显示的数据行数代码如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可以通过下面这个命令来删除空格"><span class="nav-number">1.4.</span> <span class="nav-text">可以通过下面这个命令来删除空格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过SQLPLUS创建sql文件"><span class="nav-number">2.</span> <span class="nav-text">通过SQLPLUS创建sql文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建一个admin-sql文件的命令"><span class="nav-number">2.0.1.</span> <span class="nav-text">创建一个admin.sql文件的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称"><span class="nav-number">2.0.2.</span> <span class="nav-text">可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#比如文件名为admin，可以执行文件程序"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">比如文件名为admin，可以执行文件程序</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户"><span class="nav-number">2.0.3.</span> <span class="nav-text">在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#登陆之后可以通过下面这个命令查看登录用户"><span class="nav-number">2.0.4.</span> <span class="nav-text">登陆之后可以通过下面这个命令查看登录用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调用本机DOS命令，在前面加一个HOST"><span class="nav-number">2.0.5.</span> <span class="nav-text">调用本机DOS命令，在前面加一个HOST</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#例如调用copy命令"><span class="nav-number">2.0.5.1.</span> <span class="nav-text">例如调用copy命令</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DML（数据操作语言）"><span class="nav-number">3.</span> <span class="nav-text">DML（数据操作语言）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询操作"><span class="nav-number">3.1.</span> <span class="nav-text">查询操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查看一个表的结构"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">查看一个表的结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单查询"><span class="nav-number">3.1.1.</span> <span class="nav-text">简单查询</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、删除重复的数据，通过-DISTINCT"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">1、删除重复的数据，通过[DISTINCT]</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、可以针对查询列的返回结果进行四则运算"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">2、可以针对查询列的返回结果进行四则运算</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）比如查询每个雇员的基本年薪"><span class="nav-number">3.1.1.2.1.</span> <span class="nav-text">（1）比如查询每个雇员的基本年薪</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）可以更改返回的查询结果名字"><span class="nav-number">3.1.1.2.2.</span> <span class="nav-text">（2）可以更改返回的查询结果名字</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、使用-来连接查询结果"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">3、使用||来连接查询结果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#限定查询"><span class="nav-number">3.1.2.</span> <span class="nav-text">限定查询</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、关系运算符-gt-、-lt-、-gt-、-lt-、-lt-gt"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">1、关系运算符: >、<、>=、<=、<>(!=)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）比如查询雇员工资高于1500"><span class="nav-number">3.1.2.1.1.</span> <span class="nav-text">（1）比如查询雇员工资高于1500</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）查询smith的基本信息"><span class="nav-number">3.1.2.1.2.</span> <span class="nav-text">（2）查询smith的基本信息</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、逻辑运算符：AND、OR、NOT"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">2、逻辑运算符：AND、OR、NOT</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）查询工资在1500-2000的雇员信息"><span class="nav-number">3.1.2.2.1.</span> <span class="nav-text">（1）查询工资在1500-2000的雇员信息</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）查询工资小于2000的雇员信息"><span class="nav-number">3.1.2.2.2.</span> <span class="nav-text">（2）查询工资小于2000的雇员信息</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、范围运算符：BETWEEN…AND，-IN-NOT-IN"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">3、范围运算符：BETWEEN…AND， IN ,NOT IN</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）上面的查询工资在1500-2000的雇员信息还可以这样"><span class="nav-number">3.1.2.3.1.</span> <span class="nav-text">（1）上面的查询工资在1500-2000的雇员信息还可以这样</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）查询编号为7369、7566、7788的雇员信息"><span class="nav-number">3.1.2.3.2.</span> <span class="nav-text">（2）查询编号为7369、7566、7788的雇员信息</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、空运算判断：IS-NULL-IS-NOT-NULL"><span class="nav-number">3.1.2.4.</span> <span class="nav-text">4、空运算判断：IS NULL,IS NOT NULL</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）查询所有领取佣金的雇员信息（佣金存在，不为空）"><span class="nav-number">3.1.2.4.1.</span> <span class="nav-text">（1）查询所有领取佣金的雇员信息（佣金存在，不为空）</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5、模糊查询：LIKE"><span class="nav-number">3.1.2.5.</span> <span class="nav-text">5、模糊查询：LIKE</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）下划线“-”：匹配任意一位字符。"><span class="nav-number">3.1.2.5.1.</span> <span class="nav-text">（1）下划线“_”：匹配任意一位字符。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）“-”：匹配任意的零位、一位或多位字符。"><span class="nav-number">3.1.2.5.2.</span> <span class="nav-text">（2）“%”：匹配任意的零位、一位或多位字符。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询排序"><span class="nav-number">3.1.3.</span> <span class="nav-text">查询排序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）查询所有雇员信息，要去按照工资由高到低排列（降序）"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">（1）查询所有雇员信息，要去按照工资由高到低排列（降序）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）要求查询工资由高到低排序，如果工资相同，则按雇佣日期由早到晚排序"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">（2）要求查询工资由高到低排序，如果工资相同，则按雇佣日期由早到晚排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单行函数"><span class="nav-number">3.2.</span> <span class="nav-text">单行函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、字符串函数"><span class="nav-number">3.2.1.</span> <span class="nav-text">1、字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）UPPER-LOWER函数"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">（1）UPPER,LOWER函数</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#由用户输入雇员姓名，而后显示雇员的完整信息"><span class="nav-number">3.2.1.1.1.</span> <span class="nav-text">由用户输入雇员姓名，而后显示雇员的完整信息</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）INITCAP函数（将数据转为开头首字母大写，其他小写）"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">（2）INITCAP函数（将数据转为开头首字母大写，其他小写）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）LENGTH函数（取得字符串长度）"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">（3）LENGTH函数（取得字符串长度）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#查询姓名长度为5个雇员信息"><span class="nav-number">3.2.1.3.1.</span> <span class="nav-text">查询姓名长度为5个雇员信息</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（4）SUBSTR函数（字符串截取）"><span class="nav-number">3.2.1.4.</span> <span class="nav-text">（4）SUBSTR函数（字符串截取）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#比如对helloworld进行截取，截取后面5个"><span class="nav-number">3.2.1.4.1.</span> <span class="nav-text">比如对helloworld进行截取，截取后面5个</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#也可以截取第1位到第4位"><span class="nav-number">3.2.1.4.2.</span> <span class="nav-text">也可以截取第1位到第4位</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、数值函数"><span class="nav-number">3.2.2.</span> <span class="nav-text">2、数值函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）ROUND-数据的四舍五入"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">（1）ROUND(数据的四舍五入)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）TRUNC-数据的截取"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">（2）TRUNC(数据的截取)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）MOD（求模，计算余数）"><span class="nav-number">3.2.2.3.</span> <span class="nav-text">（3）MOD（求模，计算余数）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、日期函数"><span class="nav-number">3.2.3.</span> <span class="nav-text">3、日期函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#要计算日期，首先要查询现在的日期"><span class="nav-number">3.2.3.1.</span> <span class="nav-text">要计算日期，首先要查询现在的日期</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-ADD-MONTHS"><span class="nav-number">3.2.3.2.</span> <span class="nav-text">(1) ADD_MONTHS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）MONTHS-BETWEEN"><span class="nav-number">3.2.3.3.</span> <span class="nav-text">（2）MONTHS_BETWEEN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）LAST-DAY"><span class="nav-number">3.2.3.4.</span> <span class="nav-text">（3）LAST_DAY</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（4）NEXT-DAY"><span class="nav-number">3.2.3.5.</span> <span class="nav-text">（4）NEXT_DAY</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（5）查询每位雇员被雇佣到现在的时间（年月日）"><span class="nav-number">3.2.3.6.</span> <span class="nav-text">（5）查询每位雇员被雇佣到现在的时间（年月日）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、转换函数"><span class="nav-number">3.2.4.</span> <span class="nav-text">4、转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）TO-CHAR"><span class="nav-number">3.2.4.1.</span> <span class="nav-text">（1）TO_CHAR()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）TO-DATE"><span class="nav-number">3.2.4.2.</span> <span class="nav-text">（2）TO_DATE()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、通用函数"><span class="nav-number">3.2.5.</span> <span class="nav-text">5、通用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）NVL"><span class="nav-number">3.2.5.1.</span> <span class="nav-text">（1）NVL()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）DECODE"><span class="nav-number">3.2.5.2.</span> <span class="nav-text">（2）DECODE()</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dong</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
