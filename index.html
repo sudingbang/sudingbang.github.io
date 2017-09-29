@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,6 +10,7 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
@@ -21,6 +22,7 @@
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -74,7 +76,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -86,7 +88,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -94,11 +96,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="dongg">
-<meta property="og:url" content="https://donggn.github.io/index.html">
-<meta property="og:site_name" content="dongg">
+<meta property="og:title" content="bang1318">
+<meta property="og:url" content="https://sudingbang.github.io/index.html">
+<meta property="og:site_name" content="bang1318">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dongg">
+<meta name="twitter:title" content="bang1318">
 
 
 
@@ -107,9 +109,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -126,20 +130,14 @@
 
 
 
-  <link rel="canonical" href="https://donggn.github.io/"/>
+  <link rel="canonical" href="https://sudingbang.github.io/"/>
 
 
 
 
 
-  <title>dongg</title>
+  <title>bang1318</title>
   
-
-
-
-
-
-
 
 
 
@@ -158,8 +156,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -170,12 +167,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">dongg</span>
+        <span class="site-title">bang1318</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">bang_blog</p>
       
   </div>
 
@@ -205,6 +202,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -215,8 +222,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+          <a href="/404/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -252,17 +269,21 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://donggn.github.io/2017/07/17/oracle数据库学习笔记（二）/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sudingbang.github.io/2017/08/16/002/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong">
+      <meta itemprop="name" content="bang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/image/cat.png">
+      <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dongg">
+      <meta itemprop="name" content="bang1318">
     </span>
 
     
@@ -272,7 +293,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/17/oracle数据库学习笔记（二）/" itemprop="url">oracle数据库学习笔记（二）</a></h1>
+                <a class="post-title-link" href="/2017/08/16/002/" itemprop="url">实习那件小事</a></h1>
         
 
         <div class="post-meta">
@@ -284,8 +305,347 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T15:24:35+08:00">
-                2017-07-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T15:20:12+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>8.7面试科腾数据分析。</p>
+<p>8.14上午面试广州信用卡中心运营。</p>
+<p>8.14下午面试京东商城经营分析。</p>
+<p>8.15离职3g门户。</p>
+<h1 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h1><p>①入职科腾技术岗～校招～数据分析，数据运营。</p>
+<p>②入职科腾技术岗～校招～银行</p>
+<p>③入职京东职能岗～校招（毁约京东）～互联网运营</p>
+<p>④入职京东职能岗～毕业转正</p>
+<p>⑤留职3g门户，继续面试～校招～</p>
+<p>#分析</p>
+<h2 id="入职科腾"><a href="#入职科腾" class="headerlink" title="入职科腾"></a>入职科腾</h2><p>优势：接触纯技术岗位，实习期内提高技术为后期转数据运营数据分析加筹码。</p>
+<p>劣势：技术不是我优势处，基础差并且二本学校1.技术路线2.互联网数据分析路线3.互联网数据运营路线</p>
+<p>在校招里无优势，校招进优秀公司难。</p>
+<p>##入职京东</p>
+<p>优势：可留职到毕业转正且公司名气大背书好，为日后职业道路增加筹码。</p>
+<p>劣势：上班地点远，体系为物流体系，前景大大不如电商体系。而且需做满一年转正，校招不能参加。</p>
+<h2 id="艰难的抉择"><a href="#艰难的抉择" class="headerlink" title="艰难的抉择"></a>艰难的抉择</h2><p>可能是面试面得真的累了，经过一个星期考虑后决定入职科腾做技术岗。</p>
+<p>离开3g是预料之中但是又有点不舍。短短的一个月我是真的喜欢上3g门户这家公司，虽然3g门户不复当年之勇，但毕竟公司底蕴和框架还在，无论领导和实习生都能感觉到这真的是一家互联网公司。3g门户爱玩，能玩，优秀是我一个多月里最大的感受。（尤其怀念部门王者开黑的时光）</p>
+<p>#收获</p>
+<p>懂得任何事物有得有失是我在3g的最大收获：得在于你持续性的付出，（注意是持续性）在付出的基础上还在于对机会的抓取，或是一个很小的机会别人看不起的机会（别人发现不到的问题你发现了并且解决了，别人发现了的问题解决不了，你把它解决了），然而你把它做好，最后领导还是能看到。</p>
+<h1 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h1><p>从0开始！待续…</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sudingbang.github.io/2017/08/12/Logistic-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bang1318">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/12/Logistic-1/" itemprop="url">Logistic模型的初步认识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T23:17:05+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-主要回归模型分类"><a href="#1-主要回归模型分类" class="headerlink" title="1.主要回归模型分类"></a>1.主要回归模型分类</h1><p><img src="http://ow9w8g7h2.bkt.clouddn.com/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.jpg" alt="思维导图"></p>
+<h1 id="2-Logistic回归分析介绍"><a href="#2-Logistic回归分析介绍" class="headerlink" title="2.Logistic回归分析介绍"></a>2.Logistic回归分析介绍</h1><h2 id="2-1算法描述"><a href="#2-1算法描述" class="headerlink" title="2.1算法描述"></a>2.1算法描述</h2><p>Logistic回归算法是广义线性回归的特例，利用Logistic函数将因变量的取值范围控制在0和1之间，表示取值为1的概率。</p>
+<h2 id="2-2Logistic函数"><a href="#2-2Logistic函数" class="headerlink" title="2.2Logistic函数"></a>2.2Logistic函数</h2><p>Logistic回归模型中的自变量只有0和1两种取值，分别代表不发生与发生。</p>
+<p>假设在$p$个独立自变量$x~1~$,$x~2~$,$x~3~$…$x~p~$作用下，记$y$取1的概率为$p=P(y = 1|X)$，取0的概率为$1-p$，取1和0的概率之比为$\frac{p}{1-p}$，称为事件的优势比（odds），对odds取自然对数可得$Logit(p)=ln\frac{p}{1-p}$。</p>
+<p>令$Logit(p)=ln\frac{p}{1-p}=z​$，则$ p=\frac{1}{1+exp^-z} ​$即为Logistic函数。当$p在（0,1）​$变化时odds的取值范围是$(0, \infty)​$，则$ln\frac{p}{1-p}​$的取值范围是$(-\infty, \infty)​$。</p>
+<p>因为$Logit(p)=ln\frac{p}{1-p}=z$，把$x~1~$,$x~2~$,$x~3~$…$x~p~$代入到$z$则$Logit(p)=ln\frac{p}{1-p}=β1 x1+β2 x2…βpxp+ε$</p>
+<p>最终模型为：$\frac{p}{1-p}=exp(β1 x1+β2 x2…βpxp+ε)$</p>
+<h1 id="3-Logistic回归建模步骤"><a href="#3-Logistic回归建模步骤" class="headerlink" title="3.Logistic回归建模步骤"></a>3.Logistic回归建模步骤</h1><p><img src="http://ow9w8g7h2.bkt.clouddn.com/123.png" alt="123"></p>
+<blockquote>
+<p>1）根据分析目的设置指标变量，然后收集数据，根据收集的数据，对特征进行再次筛选。</p>
+<p>2）$y$取1的概率为$p=p（y=1|X）$,取0的概率为$1-p$。用$ln(\frac{p}{1-p})$和自变量列出线性回归方程，估计出模型中的回归系数。</p>
+<p>3）进行模型检验。其中模型的检验的方法包括但不限于混淆矩阵、ROC曲线、KS值等。</p>
+<p>4）模型应用：输入自变量的取值，就可以得到预测变量的值，或者根据预测变量的值去控制自变量的取值。</p>
+</blockquote>
+<h1 id="4-Logistic回归建模实现过程"><a href="#4-Logistic回归建模实现过程" class="headerlink" title="4.Logistic回归建模实现过程"></a>4.Logistic回归建模实现过程</h1><p>本实例出自Python数据分析与挖掘实战。</p>
+<p>原始数据某银行信贷数据。其中自变量包括：年龄、教育、工龄、地址、收入、负债率、信用卡负债、其他负债（共八个）。</p>
+<p>因变量为：违约(取值为1为代表该客户违约，取值为0则表示守约)。</p>
+<p>实现过程如下:</p>
+<p>1.获取数据并且把数据转化为矩阵形式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line">filename = <span class="string">u'D:/chapter5/demo/data/bankloan.xls'</span><span class="comment">#直接复制地址为"\"需手动改为"/"才可运行</span></div><div class="line">data = pd.read_excel(filename)</div><div class="line">x = data.iloc[:,:<span class="number">8</span>].as_matrix()<span class="comment">#获取自变量数据并且转化为矩阵形式</span></div><div class="line">y = data.iloc[:,<span class="number">8</span>].as_matrix()<span class="comment">#获取因变量数据并且转化为矩阵形式</span></div></pre></td></tr></table></figure>
+<p>输出结果为：<img src="http://ow9w8g7h2.bkt.clouddn.com/1.png" alt="1"></p>
+<p>2.利用随机逻辑斯蒂回归进行特征选择。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> RandomizedLogisticRegression <span class="keyword">as</span> RLR </div><div class="line">rlr = RLR() <span class="comment">#建立随机逻辑回归模型，筛选变量</span></div><div class="line">rlr.fit(x, y) <span class="comment">#训练模型</span></div><div class="line">rlr.get_support() <span class="comment">#获取特征筛选结果，也可以通过.scores_方法获取各个特征的分数</span></div><div class="line">print(<span class="string">u'通过随机逻辑回归模型筛选特征结束。'</span>)</div><div class="line">print(<span class="string">u'有效特征为：%s'</span> % <span class="string">','</span>.join(data.columns[rlr.get_support()]))</div><div class="line">x = data[data.columns[rlr.get_support()]].as_matrix() <span class="comment">#筛选好特征</span></div></pre></td></tr></table></figure>
+<p>输出结果为：<img src="http://ow9w8g7h2.bkt.clouddn.com/2.png" alt="2"></p>
+<p>3.利用特征选择后的自变量与因变量进行Logistic建模。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression <span class="keyword">as</span> LR</div><div class="line">lr = LR() <span class="comment">#建立逻辑货柜模型</span></div><div class="line">lr.fit(x, y) <span class="comment">#用筛选后的特征数据来训练模型</span></div><div class="line">print(<span class="string">u'逻辑回归模型训练结束。'</span>)</div><div class="line">print(<span class="string">u'模型的平均正确率为：%s'</span> % lr.score(x, y)) <span class="comment">#给出模型的平均正确率</span></div></pre></td></tr></table></figure>
+<p>输出结果：<img src="http://ow9w8g7h2.bkt.clouddn.com/3.png" alt="3"></p>
+<p>4.完整代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line">filename = <span class="string">u'D:/BaiduYunDownload/python/chapter5/demo/data/bankloan.xls'</span></div><div class="line">data = pd.read_excel(filename)</div><div class="line">x = data.iloc[:,:<span class="number">8</span>].as_matrix()</div><div class="line">y = data.iloc[:,<span class="number">8</span>].as_matrix()</div><div class="line"></div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression <span class="keyword">as</span> LR</div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> RandomizedLogisticRegression <span class="keyword">as</span> RLR</div><div class="line"></div><div class="line">rlr = RLR()</div><div class="line">rlr.fit(x,y)</div><div class="line">rlr.get_support()</div><div class="line">print(<span class="string">u'本次随机逻辑回归模型筛选特征结束。'</span>)</div><div class="line">print(<span class="string">u'有效特征有:%s'</span> % <span class="string">','</span>.join(data.columns[rlr.get_support()]))</div><div class="line">x = data[data.columns[rlr.get_support()]].as_matrix()</div><div class="line"></div><div class="line">lr = LR()</div><div class="line">lr.fit(x,y)</div><div class="line">print(<span class="string">u'逻辑回归模型训练结束'</span>)</div><div class="line">print(<span class="string">u'模型的平均正确率为：%s'</span>%lr.score(x,y))</div></pre></td></tr></table></figure>
+<h1 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h1><p>经过上述内容大家应该能初步了解Logistic模型的建模过程以及能够独立利用Python完成调用模型。</p>
+<p>由上述结果可以看出，采用随机逻辑回归剔除变量，分别剔除了<strong>年龄、教育、收入和其他负债</strong>这四个变量。此外，逻辑斯蒂回归本质上是一种线性模型，所以经过特征筛选出来的变量只能证明它们与因变量具有较强的线性关系；这并不代表被剔除的变量和因变量不具备关系，它们可能是非线性关系。</p>
+<p><strong>因此在数据分析中特征筛选表现得非常重要。</strong> （具体特征筛选的方法和Logistic的具体算法会在日后的篇章有详细介绍）</p>
+<p>备注：本次采用的建模的数据为经过数据预处理后数据，真实的数据往往没有这样完美而且常常出现大量的缺失值、异常值等，所以一般建模前需要经过数据预处理。</p>
+<p>  参考文献：</p>
+<p>《Python数据分析与挖掘实战》</p>
+<p>《利用Python数据分析》</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sudingbang.github.io/2017/08/10/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bang1318">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T15:20:12+08:00">
+                2017-08-10
               </time>
             
 
@@ -313,6 +673,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -321,10 +684,151 @@
       
         
           
-            <p>在Oracle数据库学习笔记（一）中，所有的查询操作都是建立在一个表的情况下进行的，那多个表要怎么查询呢，下面是我学习多表查询、子查询、数据更新、事务处理的学习笔记。</p>
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sudingbang.github.io/2017/08/01/oracle002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bang1318">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/01/oracle002/" itemprop="url">入门Oracle（二）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T20:43:42+08:00">
+                2017-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">Oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="oracle数据库学习笔记（二）"><a href="#oracle数据库学习笔记（二）" class="headerlink" title="oracle数据库学习笔记（二）"></a>oracle数据库学习笔记（二）</h1><p>在Oracle数据库学习笔记（一）中，所有的查询操作都是建立在一个表的情况下进行的，那多个表要怎么查询呢，下面是我学习多表查询、子查询、数据更新、事务处理的学习笔记。</p>
 <h2 id="表的连接"><a href="#表的连接" class="headerlink" title="表的连接"></a>表的连接</h2><h3 id="内连接（等值连接）：所有满足条件的数据都会被显示；"><a href="#内连接（等值连接）：所有满足条件的数据都会被显示；" class="headerlink" title="内连接（等值连接）：所有满足条件的数据都会被显示；"></a>内连接（等值连接）：所有满足条件的数据都会被显示；</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span>* <span class="keyword">from</span> 表<span class="number">1</span>,表<span class="number">2</span> <span class="keyword">where</span> 表<span class="number">1.</span>变量=表<span class="number">2.</span>变量;</div></pre></td></tr></table></figure>
 <h3 id="外连接（左外连接、右外连接、全外连接）：控制左表与右表的数据是否显示；"><a href="#外连接（左外连接、右外连接、全外连接）：控制左表与右表的数据是否显示；" class="headerlink" title="外连接（左外连接、右外连接、全外连接）：控制左表与右表的数据是否显示；"></a>外连接（左外连接、右外连接、全外连接）：控制左表与右表的数据是否显示；</h3><h4 id="右连接"><a href="#右连接" class="headerlink" title="右连接:"></a>右连接:</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> 表<span class="number">1</span>,表<span class="number">2</span> <span class="keyword">where</span> 表<span class="number">1.</span>变量(+)=表<span class="number">2.</span>变量;</div></pre></td></tr></table></figure>
-<h4 id="左连接"><a href="#左连接" class="headerlink" title="左连接:"></a>左连接:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from 表1,表2 where 表1.变量=表2.变量(+);</div></pre></td></tr></table></figure>
+<h4 id="左连接"><a href="#左连接" class="headerlink" title="左连接:"></a>左连接:</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> 表<span class="number">1</span>,表<span class="number">2</span> <span class="keyword">where</span> 表<span class="number">1.</span>变量=表<span class="number">2.</span>变量(+);</div></pre></td></tr></table></figure>
 <h3 id="SQL连接语法"><a href="#SQL连接语法" class="headerlink" title="SQL连接语法"></a>SQL连接语法</h3><p>(+)只能在oracle数据库中使用，在其他数据库的连接语法如下</p>
 <h4 id="（1）CROSS-JOIN"><a href="#（1）CROSS-JOIN" class="headerlink" title="（1）CROSS JOIN"></a>（1）CROSS JOIN</h4><p>CROSS JOIN 连接就是简单的多表查询，产生笛卡尔积</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> 表<span class="number">1</span> <span class="keyword">CROSS</span> <span class="keyword">JOIN</span> 表<span class="number">2</span>;</div></pre></td></tr></table></figure>
@@ -339,14 +843,14 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> 表<span class="number">1</span> <span class="keyword">LEFT</span>/<span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">USING</span>(关联字段);</div></pre></td></tr></table></figure>
 <h2 id="查询结果的连接"><a href="#查询结果的连接" class="headerlink" title="查询结果的连接"></a>查询结果的连接</h2><p>上面讲的都是表的连接，那么对于查询结果的连接，可以用到UNION、UNION ALL、INTERSECT、MINUS</p>
 <p>上面几个用法都一样，如下</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表<span class="number">1</span></div><div class="line"><span class="keyword">UNION</span>/<span class="keyword">UNION</span> ALL/<span class="keyword">INTERSECT</span>/<span class="keyword">MINUS</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表<span class="number">2</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM 表1</div><div class="line">UNION/UNION ALL/INTERSECT/MINUS</div><div class="line">SELECT * FROM 表2;</div></pre></td></tr></table></figure>
 <h4 id="（1）UNION-不显示重复"><a href="#（1）UNION-不显示重复" class="headerlink" title="（1）UNION(不显示重复)"></a>（1）UNION(不显示重复)</h4><h4 id="（2）-UNION-ALL（显示重复）"><a href="#（2）-UNION-ALL（显示重复）" class="headerlink" title="（2） UNION ALL（显示重复）"></a>（2） UNION ALL（显示重复）</h4><h4 id="（3）-INTERSECT-（只返回重复的部分，即相同的部分）"><a href="#（3）-INTERSECT-（只返回重复的部分，即相同的部分）" class="headerlink" title="（3） INTERSECT （只返回重复的部分，即相同的部分）"></a>（3） INTERSECT （只返回重复的部分，即相同的部分）</h4><h4 id="（4）MINUS-（由第一个查询减去第二个查询，差集）"><a href="#（4）MINUS-（由第一个查询减去第二个查询，差集）" class="headerlink" title="（4）MINUS （由第一个查询减去第二个查询，差集）"></a>（4）MINUS （由第一个查询减去第二个查询，差集）</h4><h2 id="统计分组查询"><a href="#统计分组查询" class="headerlink" title="统计分组查询"></a>统计分组查询</h2><h3 id="统计函数："><a href="#统计函数：" class="headerlink" title="统计函数："></a>统计函数：</h3><p>主要是这五个统计函数分别为:sum(),avg(),count(),max(),min()</p>
 <h3 id="分组函数："><a href="#分组函数：" class="headerlink" title="分组函数："></a>分组函数：</h3><p>分组就用 group by 函数，group by 函数执行步骤在from跟where之后，group by 函数有几个限制</p>
 <h4 id="第一："><a href="#第一：" class="headerlink" title="第一："></a>第一：</h4><p>group by中出现的字段，在select中也需要出现，除此之外，select中只能出现用到上述统计函数的字段。</p>
 <h4 id="第二："><a href="#第二：" class="headerlink" title="第二："></a>第二：</h4><p>统计函数允许嵌套查询（即类似于max(avg())),但是使用了嵌套查询后，select中不能出现分组字段。</p>
 <p>分组后不可以用WHERE来进行条件过滤，因为group by是在where之后执行的,但是在分组后可以用HAVING来过滤，因为HAVING是在group by之后执行的。</p>
 <p>SQL语句执行步骤是跟下面这样一致的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">5、SELECT</div><div class="line">1、FROM</div><div class="line">2、WHERE</div><div class="line">3、GROUP BY</div><div class="line">4、HAVING</div><div class="line">6、ORDER BY</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">5、<span class="keyword">SELECT</span></div><div class="line"><span class="number">1</span>、<span class="keyword">FROM</span></div><div class="line"><span class="number">2</span>、<span class="keyword">WHERE</span></div><div class="line"><span class="number">3</span>、<span class="keyword">GROUP</span> <span class="keyword">BY</span></div><div class="line"><span class="number">4</span>、<span class="keyword">HAVING</span></div><div class="line"><span class="number">6</span>、<span class="keyword">ORDER</span> <span class="keyword">BY</span></div></pre></td></tr></table></figure>
 <h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><p>解决多表查询所带来的笛卡尔积影响的性能问题，子查询可以出现在几个位置，比如WHERE子句，FROM 子句，SELECT子句，HAVING 子句。</p>
 <h3 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h3><p>子查询返回单行单列、单行多列、多行单列的可以将子查询放到where子句后面</p>
 <p>比如</p>
@@ -376,24 +880,21 @@
 <h2 id="事务处理"><a href="#事务处理" class="headerlink" title="事务处理"></a>事务处理</h2><p>事务是针对于数据更新使用的，只要DML的更新操作才存在事务。在这里有两个命令：COMMIT和ROLLBACK。</p>
 <h3 id="COMMIT"><a href="#COMMIT" class="headerlink" title="COMMIT"></a>COMMIT</h3><p>这个命令用来进行事务提交，如果进行了多条更新操作，在没有执行COMMIT之前，所有的更新操作将会放在缓冲区，只有执行了之后才算是更新完成</p>
 <h3 id="ROLLBACK"><a href="#ROLLBACK" class="headerlink" title="ROLLBACK"></a>ROLLBACK</h3><p>事务回滚操作，在发现更新有问题之后，可以用这个命令来回复到更新前的数据。</p>
-<h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>在不同的session发出同一条指令的时候，一个先执行的session会堵塞住另一个session，也可以说是另一个session在等待先执行的session完成指令。    </p>
+<h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>在不同的session发出同一条指令的时候，一个先执行的session会堵塞住另一个session，也可以说是另一个session在等待先执行的session完成指令。</p>
 
           
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -407,6 +908,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -419,17 +924,21 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://donggn.github.io/2017/07/14/oracle数据库学习笔记（一）/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sudingbang.github.io/2017/08/01/oracle001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong">
+      <meta itemprop="name" content="bang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/image/cat.png">
+      <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dongg">
+      <meta itemprop="name" content="bang1318">
     </span>
 
     
@@ -439,7 +948,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/14/oracle数据库学习笔记（一）/" itemprop="url">oracle数据库学习笔记(一)</a></h1>
+                <a class="post-title-link" href="/2017/08/01/oracle001/" itemprop="url">入门Oracle（一）</a></h1>
         
 
         <div class="post-meta">
@@ -451,8 +960,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-14T15:14:13+08:00">
-                2017-07-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T20:40:42+08:00">
+                2017-08-01
               </time>
             
 
@@ -461,6 +970,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">Oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -480,6 +1011,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -488,25 +1022,25 @@
       
         
           
-            <p>oracle数据库是甲骨文公司的一款关系数据库管理系统，其实之前就有学习过sql server数据库，知道数据库的一些基本用法，在学习oracle的时候，发现有一些不同，下面是我学习oracle数据库的笔记。</p>
+            <h1 id="oracle数据库学习笔记-一"><a href="#oracle数据库学习笔记-一" class="headerlink" title="oracle数据库学习笔记(一)"></a>oracle数据库学习笔记(一)</h1><p>oracle数据库是甲骨文公司的一款关系数据库管理系统，其实之前就有学习过sql server数据库，知道数据库的一些基本用法，在学习oracle的时候，发现有一些不同，下面是我学习oracle数据库的笔记。</p>
 <p>首先，在oracle安装完成后，会自动提供一个sqlplus命令可以直接运行，我在学习oracle数据库时，都是使用sqlplus来执行oracle命令。</p>
 <p>数据库的基本组成是数据表，我在学习过程中都是用到几个常用的数据表，比如emp、dept、salgrade等等，等下下面会有提到。</p>
 <h2 id="格式化的代码"><a href="#格式化的代码" class="headerlink" title="格式化的代码"></a>格式化的代码</h2><h3 id="首先查看emp表的内容代码如下"><a href="#首先查看emp表的内容代码如下" class="headerlink" title="首先查看emp表的内容代码如下"></a>首先查看emp表的内容代码如下</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp;</div></pre></td></tr></table></figure>
-<p><img src="http://ot2lgrdzd.bkt.clouddn.com/%E6%80%BB%E8%A1%A8.png" alt="总表"></p>
+<p><a href="http://ot2lgrdzd.bkt.clouddn.com/%E6%80%BB%E8%A1%A8.png" target="_blank" rel="external"><img src="http://ot2lgrdzd.bkt.clouddn.com/%E6%80%BB%E8%A1%A8.png" alt="总表"></a></p>
 <p>观察结果看起来不符合预期要求，需要调整一下每行显示的数据长度以及调整命令行的字体大小跟布局。</p>
 <h3 id="调整每行显示的数据长度代码如下"><a href="#调整每行显示的数据长度代码如下" class="headerlink" title="调整每行显示的数据长度代码如下"></a>调整每行显示的数据长度代码如下</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> LINESIZE <span class="number">300</span></div></pre></td></tr></table></figure>
 <h3 id="设置每页显示的数据行数代码如下"><a href="#设置每页显示的数据行数代码如下" class="headerlink" title="设置每页显示的数据行数代码如下"></a>设置每页显示的数据行数代码如下</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> PAGESIZE <span class="number">30</span></div></pre></td></tr></table></figure>
 <p>上面两个指令称为格式化指令。</p>
-<p><img src="http://ot2lgrdzd.bkt.clouddn.com/%E6%A0%BC%E5%BC%8F%E5%8C%96.png" alt="格式化后的表"></p>
+<p><a href="http://ot2lgrdzd.bkt.clouddn.com/%E6%A0%BC%E5%BC%8F%E5%8C%96.png" target="_blank" rel="external"><img src="http://ot2lgrdzd.bkt.clouddn.com/%E6%A0%BC%E5%BC%8F%E5%8C%96.png" alt="格式化后的表"></a></p>
 <p>除此之外，观察结果会发现有些类别的数据存在很多空格</p>
 <h3 id="可以通过下面这个命令来删除空格"><a href="#可以通过下面这个命令来删除空格" class="headerlink" title="可以通过下面这个命令来删除空格"></a>可以通过下面这个命令来删除空格</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">COL 类名 FOR AN</div></pre></td></tr></table></figure>
 <p>这里的N为要保留的字符个数，比如删除ENAME上多余的空格，保留六个字符</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">COL ENAME FOR A6</div></pre></td></tr></table></figure>
 <p>会得到这样的一个结果</p>
-<p><img src="http://ot2lgrdzd.bkt.clouddn.com/COL.png" alt="删除空格之后的表"></p>
+<p><a href="http://ot2lgrdzd.bkt.clouddn.com/COL.png" target="_blank" rel="external"><img src="http://ot2lgrdzd.bkt.clouddn.com/COL.png" alt="删除空格之后的表"></a></p>
 <h2 id="通过SQLPLUS创建sql文件"><a href="#通过SQLPLUS创建sql文件" class="headerlink" title="通过SQLPLUS创建sql文件"></a>通过SQLPLUS创建sql文件</h2><p>在window系统下，可以通过下面这个命令创建一个.sql文件，然后可以在.sql文件中编写代码。</p>
 <h4 id="创建一个admin-sql文件的命令"><a href="#创建一个admin-sql文件的命令" class="headerlink" title="创建一个admin.sql文件的命令"></a>创建一个admin.sql文件的命令</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ed admin</div></pre></td></tr></table></figure>
-<h4 id="可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称"><a href="#可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称" class="headerlink" title="可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称"></a>可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称</h4><h5 id="比如文件名为admin，可以执行文件程序"><a href="#比如文件名为admin，可以执行文件程序" class="headerlink" title="比如文件名为admin，可以执行文件程序"></a>比如文件名为admin，可以执行文件程序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@文件路径\admin</div></pre></td></tr></table></figure>
+<h4 id="可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称"><a href="#可以通过下面这个命令来执行文件里面的程序，格式为-文件路径-文件名称" class="headerlink" title="可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称"></a>可以通过下面这个命令来执行文件里面的程序，格式为@文件路径\文件名称</h4><h5 id="比如文件名为admin，可以执行文件程序"><a href="#比如文件名为admin，可以执行文件程序" class="headerlink" title="比如文件名为admin，可以执行文件程序"></a>比如文件名为admin，可以执行文件程序</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@文件路径\admin</div></pre></td></tr></table></figure>
 <h4 id="在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户"><a href="#在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户" class="headerlink" title="在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户"></a>在oracle中有四个用户，可以直接在sqlplus输入如下命令来切换用户</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CONN 用户名/密码 [AS SYSDBA]</div></pre></td></tr></table></figure>
 <p>在sys用户下需要在后面加上语句 [AS SYSDBA]，因为sys用户的权限是最大的，需要超级管理员才可以登陆。</p>
 <h4 id="登陆之后可以通过下面这个命令查看登录用户"><a href="#登陆之后可以通过下面这个命令查看登录用户" class="headerlink" title="登陆之后可以通过下面这个命令查看登录用户"></a>登陆之后可以通过下面这个命令查看登录用户</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SHOW</span> <span class="keyword">USER</span></div></pre></td></tr></table></figure>
@@ -516,7 +1050,7 @@
 <p>比如查看dept表的结构</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DESC dept</div></pre></td></tr></table></figure>
 <p>会显示</p>
-<p><img src="http://ot2lgrdzd.bkt.clouddn.com/DEPT.png" alt="删除空格之后的表"></p>
+<p><a href="http://ot2lgrdzd.bkt.clouddn.com/DEPT.png" target="_blank" rel="external"><img src="http://ot2lgrdzd.bkt.clouddn.com/DEPT.png" alt="删除空格之后的表"></a></p>
 <h5 id="观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表"><a href="#观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表" class="headerlink" title="观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表"></a>观察结果会发现有几种数据类型，所以我去查阅了一下得出如下表</h5><table>
 <thead>
 <tr>
@@ -590,36 +1124,33 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> HIREDATE=<span class="keyword">LAST_DAY</span>(HIREDATE)<span class="number">-2</span>;</div></pre></td></tr></table></figure>
 <h5 id="（4）NEXT-DAY"><a href="#（4）NEXT-DAY" class="headerlink" title="（4）NEXT_DAY"></a>（4）NEXT_DAY</h5><p>返回下一个指定的一周时间数所对应的日期，比如指定周二，会返回下周二的日期</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> NEXT_DAY(<span class="keyword">SYSDATE</span>,<span class="string">'星期二'</span>) <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
-<h5 id="（5）查询每位雇员被雇佣到现在的时间（年月日）"><a href="#（5）查询每位雇员被雇佣到现在的时间（年月日）" class="headerlink" title="（5）查询每位雇员被雇佣到现在的时间（年月日）"></a>（5）查询每位雇员被雇佣到现在的时间（年月日）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT </div><div class="line">TRUNC(MONTHS_BETWEEN(SYSDATE,HIREDATE)/12)  ||&apos;年&apos;|| </div><div class="line">TRUNC(MOD(MONTHS_BETWEEN(SYSDATE,HIREDATE),12)) ||&apos;月&apos;|| </div><div class="line">TRUNC(SYSDATE-ADD_MONTHS(HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE))) ||&apos;天&apos; sum</div><div class="line">FROM EMP;</div></pre></td></tr></table></figure>
+<h5 id="（5）查询每位雇员被雇佣到现在的时间（年月日）"><a href="#（5）查询每位雇员被雇佣到现在的时间（年月日）" class="headerlink" title="（5）查询每位雇员被雇佣到现在的时间（年月日）"></a>（5）查询每位雇员被雇佣到现在的时间（年月日）</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> </div><div class="line">TRUNC(MONTHS_BETWEEN(<span class="keyword">SYSDATE</span>,HIREDATE)/<span class="number">12</span>)  ||<span class="string">'年'</span>|| </div><div class="line">TRUNC(<span class="keyword">MOD</span>(MONTHS_BETWEEN(<span class="keyword">SYSDATE</span>,HIREDATE),<span class="number">12</span>)) ||<span class="string">'月'</span>|| </div><div class="line">TRUNC(<span class="keyword">SYSDATE</span>-ADD_MONTHS(HIREDATE,MONTHS_BETWEEN(<span class="keyword">SYSDATE</span>,HIREDATE))) ||<span class="string">'天'</span> <span class="keyword">sum</span></div><div class="line"><span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
 <h4 id="4、转换函数"><a href="#4、转换函数" class="headerlink" title="4、转换函数"></a>4、转换函数</h4><h5 id="（1）TO-CHAR"><a href="#（1）TO-CHAR" class="headerlink" title="（1）TO_CHAR()"></a>（1）TO_CHAR()</h5><p>TO_CHAR()可以将日期或数字转为字符串，例如将日期格式化</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 	TO_CHAR(<span class="keyword">SYSDATE</span>,<span class="string">'yyyy-mm-dd hh24:mi:ss'</span>) <span class="keyword">FROM</span> DUAL;</div></pre></td></tr></table></figure>
 <p>将数字格式化</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> TO_CHAR(<span class="number">2288866442</span>,<span class="string">'L999,999,999,999'</span>) <span class="keyword">FROM</span> dual;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT TO_CHAR(2288866442,&apos;L999,999,999,999&apos;) FROM dual;</div></pre></td></tr></table></figure>
 <h5 id="（2）TO-DATE"><a href="#（2）TO-DATE" class="headerlink" title="（2）TO_DATE()"></a>（2）TO_DATE()</h5><p>TO_DATE()跟TO_CHAR()的将日期转为字符串相反，TO_DATE()是将字符串转为日期，例如</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">TO_DATE</span>(<span class="string">'1999-12-12'</span>,<span class="string">'yyyy-mm-dd'</span>) <span class="keyword">from</span> dual;</div></pre></td></tr></table></figure>
 <h4 id="5、通用函数"><a href="#5、通用函数" class="headerlink" title="5、通用函数"></a>5、通用函数</h4><h5 id="（1）NVL"><a href="#（1）NVL" class="headerlink" title="（1）NVL()"></a>（1）NVL()</h5><p>NVL可以对空值进行处理，比如转换为0</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> NVL(COMM,<span class="number">0</span>) <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
 <p>他的格式是这样的 ：NVL(要转换的变量,要转换的数值)</p>
 <h5 id="（2）DECODE"><a href="#（2）DECODE" class="headerlink" title="（2）DECODE()"></a>（2）DECODE()</h5><p>DECODE函数像是一个if-else函数，它的用法如下</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> JOB,<span class="keyword">DECODE</span>(JOB,<span class="string">'CLERK'</span>，<span class="string">'检查'</span>,<span class="string">'SALESMAN'</span>,<span class="string">'销售'</span>,<span class="string">'---'</span>) <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure>
-<p> 以上是我观看<strong>李兴华</strong>老师的<strong>Oracle从入门到精通</strong>课程的学习笔记，接下来还会继续学习。</p>
+<p>SELECT JOB,DECODE(JOB,’CLERK’，’检查’,’SALESMAN’,’销售’,’—‘) FROM EMP;</p>
+<p>以上是我观看<strong>李兴华</strong>老师的<strong>Oracle从入门到精通</strong>课程的学习笔记，接下来还会继续学习。</p>
 
           
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -633,6 +1164,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -645,17 +1180,21 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://donggn.github.io/2017/07/08/决策树/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sudingbang.github.io/2017/06/12/001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong">
+      <meta itemprop="name" content="bang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/image/cat.png">
+      <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dongg">
+      <meta itemprop="name" content="bang1318">
     </span>
 
     
@@ -665,7 +1204,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/08/决策树/" itemprop="url">决策树</a></h1>
+                <a class="post-title-link" href="/2017/06/12/001/" itemprop="url">My life</a></h1>
         
 
         <div class="post-meta">
@@ -677,8 +1216,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-08T22:17:49+08:00">
-                2017-07-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-12T23:50:42+08:00">
+                2017-06-12
               </time>
             
 
@@ -687,6 +1226,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -706,6 +1267,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -714,224 +1278,24 @@
       
         
           
-            <p>​    决策树是一种分类与回归方法，在很多领域有着广泛应用。决策树是一种树状结构，在分类问题中，表示基于特征对实例进行分类的过程，它的每一个叶节点对应着一个分类，它可以认为是if-then规则的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。在学习时，利用训练数据，根据损失函数最小化的原则建立决策树模型；预测时，对新的数据，利用决策树模型进行分类。。。</p>
-<p>​    决策树的优点：模型具有可读性，相比KNN算法，决策树的分类速度快。</p>
-<p>​    决策树学习通常包括3个步骤：特征选择、决策树的生成和修建。</p>
-<h2 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h2><p>​    特征选择在于选取对训练数据具有分类能力的特征，这样做是为了提高决策树的学习效率。通常特征选择的准则是信息增益或信息增益比。</p>
-<h4 id="在这里介绍一下信息增益"><a href="#在这里介绍一下信息增益" class="headerlink" title="在这里介绍一下信息增益"></a>在这里介绍一下信息增益</h4><p>​    介绍信息增益之前，先说一下熵，因为计算信息增益的时候要用到熵，在信息论与概率统计中，熵是表示随机变量不确定性的度量。设<em>X</em>是一个取有限个值的离散随机变量，其概率分布为<br>$$<br>P(X=x_i)=p_i ,i=1,2,···n<br>$$<br>​    则随机变量<em>X</em> 的熵定义为<br>$$<br>H(X)=-\sum_{i=1}^n p_i\log(p_i)<br>$$<br>​     熵只依赖于<em>X</em>的分布，与<em>X</em>取值无关，所以也可将熵写为<br>$$<br>H(P)=-\sum_{i=1}^n p_i\log(p_i)<br>$$<br>​    熵越大，随机变量的不确定性就越大，数据集D的经验熵为<br>$$<br>H(D)=-\sum_{k=1}^K\frac{|C_k|}{D}\log_2\frac{|C_k|}{D}<br>$$<br>​    接下来再说一个条件熵，条件熵表示在已知随机变量<em>X</em>的条件下随机变量<em>Y</em>的不确定性，定义为<em>X</em>给定条件下<em>Y</em>的条件概率分布的熵对<em>X</em>的数学期望<br>$$<br>H(Y|X) = \sum_{i=1}^np_iH(Y|X=x_i)，p_i=P(X=x_i),i=1,2,···，n<br>$$<br>​    特征A对数据集D的经验条件熵为<br>$$<br>H(D|A)=\sum_{i=1}^n\frac{|D_i|}{|D|}H(D_i)=-\sum_{i=1}^n\frac{|D_i|}{|D|}\sum_{k=1}^K\log_2\frac{|D_{ik}|}{|D_i|}<br>$$<br>​    说了那么前面两个熵，前者可以称为经验熵，条件熵可以称为经验条件熵，信息增益表示得知特征<em>X</em>的信息而使得类<em>Y</em>的信息的不确定性减少的程度，即等于经验熵减去经验条件熵,即为<br>$$<br>g(D,A)=H(D)-H(D|A)<br>$$<br>​    所以在选择根节点的时候都是选取信息增益最大的特征作为根节点。</p>
-<p>​    信息增益比是特征选择的另一准则其定义为<br>$$<br>g_k(D,A)=\frac{g(D,A)}{H(D)}<br>$$</p>
-<h2 id="决策树的生成"><a href="#决策树的生成" class="headerlink" title="决策树的生成"></a>决策树的生成</h2><p>​    前面说了信息增益，接下来说一下决策树的生成算法，其中主要包括三种算法，一种是ID3算法，一种是C4.5算法，还有一种是CART算法，下表是三种算法的区别</p>
-<table>
-<thead>
-<tr>
-<th>算法</th>
-<th>算法区别</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID3算法</td>
-<td>使用信息增益作为属性的选择标准</td>
-</tr>
-<tr>
-<td>C4.5算法</td>
-<td>使用信息增益比作为属性选择标准</td>
-</tr>
-<tr>
-<td>CART算法</td>
-<td>使用基尼指数来划分节点属性</td>
-</tr>
-</tbody>
-</table>
-<p>​    在这里只介绍ID3算法，其余两个以后再介绍。</p>
-<h4 id="详细流程"><a href="#详细流程" class="headerlink" title="详细流程"></a>详细流程</h4><p>​    （1）对当前样本集合，计算所有属性的信息增益</p>
-<p>​    （2）选择信息增益最大的属性作为测试属性，把测试属性取值相同的样本划为同一个子样本集</p>
-<p>​    （3）若子样本集的类别属性只含有单个属性，则分支为叶子节点，判断其类别并且标上符号，然后返回调用处；否则对子样本集递归调用本算法。</p>
-<p>​    在python上来实现，首先我在这里选取一个餐饮案例的数据集，其中有三个特征值，分别如下表</p>
-<table>
-<thead>
-<tr>
-<th>特征值</th>
-<th>类别</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>天气</td>
-<td>好、坏</td>
-</tr>
-<tr>
-<td>是否周末</td>
-<td>是、否</td>
-</tr>
-<tr>
-<td>是否有促销</td>
-<td>是、否</td>
-</tr>
-</tbody>
-</table>
-<p>​    部分数据如下</p>
-<table>
-<thead>
-<tr>
-<th>天气</th>
-<th>是否周末</th>
-<th>是否有促销</th>
-<th>销量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>坏</td>
-<td>是</td>
-<td>是</td>
-<td>高</td>
-</tr>
-<tr>
-<td>坏</td>
-<td>否</td>
-<td>是</td>
-<td>高</td>
-</tr>
-<tr>
-<td>好</td>
-<td>否</td>
-<td>是</td>
-<td>低</td>
-</tr>
-<tr>
-<td>好</td>
-<td>否</td>
-<td>否</td>
-<td>低</td>
-</tr>
-</tbody>
-</table>
-<p>​    接下来在python上读取数据，将数据存储到data上，然后写一个特征值的列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fr = open(<span class="string">"D:/QQPCmgr/Desktop/sale_.txt"</span>)</div><div class="line">data = [inst.strip().split(<span class="string">'\t'</span>) <span class="keyword">for</span> inst <span class="keyword">in</span> fr.readlines()]</div><div class="line">Labels=[<span class="string">'天气'</span>,<span class="string">'是否周末'</span>,<span class="string">'是否有促销'</span>]</div></pre></td></tr></table></figure>
-<p>​    前面说到要计算信息增益就要先计算熵跟条件熵，所以先计算一下熵</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">calcShannonEnt</span><span class="params">(dataSet)</span>:</span></div><div class="line">    numEntries=len(dataSet)  <span class="comment">#计算数据集的长度，等下用来计算香农熵</span></div><div class="line">    labelCounts=&#123;&#125;  <span class="comment">#创建一个空字典，等下用来存储销量高和低的样本个数</span></div><div class="line">    <span class="keyword">for</span> featVec <span class="keyword">in</span> dataSet:</div><div class="line">        currentLabel=featVec[<span class="number">-1</span>] </div><div class="line">        <span class="keyword">if</span> currentLabel <span class="keyword">not</span> <span class="keyword">in</span> labelCounts.keys(): </div><div class="line">            labelCounts[currentLabel]=<span class="number">0</span></div><div class="line">        labelCounts[currentLabel]+=<span class="number">1</span>  <span class="comment">#上面这个循环都是用来计算销量高低的样本个数</span></div><div class="line">        shannonEnt=<span class="number">0</span></div><div class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> labelCounts:</div><div class="line">        prob=float(labelCounts[key])/numEntries  <span class="comment">#分类的概率</span></div><div class="line">        shannonEnt-=prob*log(prob,<span class="number">2</span>) <span class="comment"># 求香农熵</span></div><div class="line">    <span class="keyword">return</span> shannonEnt</div></pre></td></tr></table></figure>
-<p>​    上面定义一个方法来计算熵，现在计算一下总的熵</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(calcShannonEnt(data))</div></pre></td></tr></table></figure>
-<p>​    可以得出结果 0.9975025463691153，所以得知总的熵为这个值</p>
-<p>​    接下来就要来计算条件熵，因为条件熵是已知随机变量<em>X</em>的条件下随机变量<em>Y</em>的不确定性，用特征来说，就是在特征A被固定下来的情况下的熵，所以可以先根据特征A来划分数据集，再来计算这部分数据集的熵。</p>
-<p>​    划分数据集的代码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">splitDataSet</span><span class="params">(dataSet,i,value)</span>:</span></div><div class="line">    retDataSet=[]</div><div class="line">    <span class="keyword">for</span> featVec <span class="keyword">in</span> dataSet:</div><div class="line">        <span class="keyword">if</span> featVec[i]==value:    <span class="comment">#根据第i个特征来划分数据集</span></div><div class="line">            reducedFeatVec=featVec[:i]</div><div class="line">            reducedFeatVec.extend(featVec[i+<span class="number">1</span>:]) <span class="comment">#上面两个语句用来选择除第i个特征的其他数据</span></div><div class="line">            retDataSet.append(reducedFeatVec) <span class="comment">#存储到retDataSet中</span></div><div class="line">    <span class="keyword">return</span> retDataSet</div></pre></td></tr></table></figure>
-<p>​    例如对天气为好跟坏的情况下，可以这样划分</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data1_1=splitDataSet(data,<span class="number">0</span>,<span class="string">'好'</span>)</div><div class="line">data1_2=splitDataSet(data,<span class="number">0</span>,<span class="string">'坏'</span>)</div></pre></td></tr></table></figure>
-<p>​    天气为好的部分数据如下 </p>
-<table>
-<thead>
-<tr>
-<th>是否周末</th>
-<th>是否有促销</th>
-<th>销量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>是</td>
-<td>是</td>
-<td>高</td>
-</tr>
-<tr>
-<td>是</td>
-<td>否</td>
-<td>高</td>
-</tr>
-<tr>
-<td>是</td>
-<td>是</td>
-<td>高</td>
-</tr>
-</tbody>
-</table>
-<p>​    天气为坏的部分数据如下</p>
-<table>
-<thead>
-<tr>
-<th>是否周末</th>
-<th>是否有促销</th>
-<th>销量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>否</td>
-<td>是</td>
-<td>高</td>
-</tr>
-<tr>
-<td>否</td>
-<td>否</td>
-<td>低</td>
-</tr>
-<tr>
-<td>否</td>
-<td>是</td>
-<td>高</td>
-</tr>
-</tbody>
-</table>
-<p>​    要计算这个特征的条件熵，首先先计算天气为好跟坏两部分数据的熵，这里用到前面的calcShannonEnt</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">calcShannonEnt1_1=calcShannonEnt(data1_1)</div><div class="line">calcShannonEnt1_2=calcShannonEnt(data1_2)</div></pre></td></tr></table></figure>
-<p>​    得出的结果如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">calcShannonEnt1_1</div><div class="line">0.9366673818775626</div><div class="line"></div><div class="line">calcShannonEnt1_2</div><div class="line">0.9774178175281716</div></pre></td></tr></table></figure>
-<p>​    根据计算条件熵的公式，还要计算两部分数据集分别占总数据集的比例，可以这样计算</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">prob1_1=len(data1_1)/float(len(data))</div><div class="line">prob1_2=len(data1_2)/float(len(data))</div></pre></td></tr></table></figure>
-<p>​    最后计算条件熵</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">newEntropy1=prob1_1*calcShannonEnt1_1+prob1_2*calcShannonEnt1_2</div><div class="line">print(newEntropy1)</div></pre></td></tr></table></figure>
-<p>​    结果为：0.9570425997028671</p>
-<p>​    熵跟条件熵都计算出来了，现在可以计算信息增益</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">infoGain1=calcShannonEnt(data)-newEntropy1</div><div class="line">print(infoGain1)</div></pre></td></tr></table></figure>
-<p>​    结果为：0.04045994666624819</p>
-<p>​    特征为天气的信息增益的结果如上，接下来再算一下其他特征的信息增益，如果按照上诉的步骤一步一步计算过于繁杂，所以直接定义一个for循环来遍历特征，以及用个if语句来选择最大信息增益。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">chooseBestFeatureToSplit</span><span class="params">(dataSet)</span>:</span></div><div class="line">    numFeatures=len(dataSet[<span class="number">0</span>])<span class="number">-1</span>     <span class="comment">#特征数量</span></div><div class="line">    baseEntropy=calcShannonEnt(dataSet)   <span class="comment">#先求总的信息熵</span></div><div class="line">    bestInfoGain=<span class="number">0.0</span></div><div class="line">    bestFeature=<span class="number">-1</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numFeatures): <span class="comment">#下面开始遍历所有特征，分别计算出每个特征的信息增益然后加以比较</span></div><div class="line">        featList=[example[i] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet] <span class="comment">#得到第i个特征的所有类别</span></div><div class="line">        uniqueVals=set(featList)     <span class="comment">#删除掉重复的值</span></div><div class="line">        newEntropy=<span class="number">0.0</span> </div><div class="line">        <span class="keyword">for</span> value <span class="keyword">in</span> uniqueVals:</div><div class="line">            subDataSet=splitDataSet(dataSet,i,value) <span class="comment">#按第i个特征划分数据集</span></div><div class="line">            prob=len(subDataSet)/float(len(dataSet)) <span class="comment">#第i个特征的value类别所占样本总体的比例</span></div><div class="line">            newEntropy+=prob*calcShannonEnt(subDataSet) <span class="comment">#计算第i个特征固定下来的条件熵</span></div><div class="line">        infoGain=baseEntropy-newEntropy  </div><div class="line">        <span class="comment">#用属性i划分样本后所得的信息增益infoGain，越大说明属性i对于分类提供的信息越大</span></div><div class="line">        <span class="keyword">if</span> (infoGain&gt;bestInfoGain):</div><div class="line">            bestInfoGain=infoGain</div><div class="line">            bestFeature=i</div><div class="line">    <span class="keyword">return</span> bestFeature</div><div class="line">chooseBestFeatureToSplit(data)</div></pre></td></tr></table></figure>
-<p>​    这里的结果为1，即第二个特征的信息增益最大，第二个特征为是否周末，我们选取第二个特征来作为根节点。</p>
-<p>​    上面只是说了如何来度量数据集的信息熵，如何有效划分数据集，如何选择根节点，下面就要用上面的方法来构建决策树，首先用多数表决的方法来决定叶子节点的分类结果。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> operator</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">majorityCnt</span><span class="params">(classList)</span>:</span> </div><div class="line">    classCount=&#123;&#125;       <span class="comment">#初始化字典</span></div><div class="line">    <span class="keyword">for</span> vote <span class="keyword">in</span> classList: </div><div class="line">        <span class="keyword">if</span> vote <span class="keyword">not</span> <span class="keyword">in</span> classCount.keys():</div><div class="line">            classCount[vote]=<span class="number">0</span></div><div class="line">        classCount[vote]+=<span class="number">1</span>              <span class="comment">#上面几个语句都用来计算类别的数目并且储存在classCount字典中</span></div><div class="line">    sortedClassCount=sorted(classCount.items(),key=operator.itemgetter(<span class="number">1</span>),reverse=<span class="keyword">True</span>) </div><div class="line">    <span class="comment">#然后进行排序，按classCount的第二个参数进行降序,选取最大的类别作为叶子节点的类别</span></div><div class="line">    <span class="keyword">return</span> sortedClassCount[<span class="number">0</span>][<span class="number">0</span>]</div></pre></td></tr></table></figure>
-<p>​    这个方法在接下来递归构建决策树时会用到，说到递归构建决策树，递归结束的条件为程序遍历完所有划分数据集的属性，或者每个分支下的所有实例都具有相同的分类。如果所有实例具有相同的分类，则得到一个叶子结点，下面的程序是创建树的完整代码。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">createTree</span><span class="params">(dataSet,labels)</span>:</span></div><div class="line">    classList=[example[<span class="number">-1</span>] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet]  </div><div class="line">    <span class="comment">#销量的所有类别存储在classList中</span></div><div class="line">    <span class="keyword">if</span> classList.count(classList[<span class="number">0</span>])==len(classList): <span class="comment">#类别完全相同停止划分</span></div><div class="line">        <span class="keyword">return</span> classList[<span class="number">0</span>]</div><div class="line">    <span class="keyword">if</span> len(dataSet[<span class="number">0</span>])==<span class="number">1</span>:        <span class="comment">#遍历完所有特征后返回次数最多的类别作为叶子节点</span></div><div class="line">        <span class="keyword">return</span> majorityCnt(classList)           </div><div class="line">    bestFeat=chooseBestFeatureToSplit(dataSet) </div><div class="line">    bestFeatLabel=labels[bestFeat]  <span class="comment">#选取信息增益最大的类别作为决策树顶端节点</span></div><div class="line">    myTree=&#123;bestFeatLabel:&#123;&#125;&#125;   </div><div class="line">    <span class="comment">#将它存储到一个字典里，等下还会用myTree来存储树的所有信息</span></div><div class="line">    <span class="keyword">del</span>(labels[bestFeat])    <span class="comment">#然后删除已划分的属性，不然会影响后续划分结果      </span></div><div class="line">    featValues=[example[bestFeat] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet]   <span class="comment">#选取最好的特征</span></div><div class="line">    uniqueVals=set(featValues)</div><div class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> uniqueVals: </div><div class="line">        <span class="comment">#在最好的特征下再划分决策树，继续调用createTree方法</span></div><div class="line">        subLabels=labels[:]</div><div class="line">        myTree[bestFeatLabel][value]=createTree(splitDataSet(dataSet,bestFeat,value),subLabels)</div><div class="line">    <span class="keyword">return</span> myTree</div><div class="line">dataTree = trees.createTree(data,Labels)</div><div class="line">print(dataTree)</div></pre></td></tr></table></figure>
-<p>​    得到结果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="string">'是否周末'</span>: &#123;<span class="string">'是'</span>: &#123;<span class="string">'天气'</span>: &#123;<span class="string">'好'</span>: <span class="string">'高'</span>, <span class="string">'坏'</span>: &#123;<span class="string">'是否有促销'</span>: &#123;<span class="string">'是'</span>: <span class="string">'高'</span>, <span class="string">'否'</span>: <span class="string">'低'</span>&#125;&#125;&#125;&#125;, <span class="string">'否'</span>: &#123;<span class="string">'是否有促销'</span>: &#123;<span class="string">'是'</span>: &#123;<span class="string">'天气'</span>: &#123;<span class="string">'好'</span>: <span class="string">'高'</span>, <span class="string">'坏'</span>: <span class="string">'低'</span>&#125;&#125;, <span class="string">'否'</span>: &#123;<span class="string">'天气'</span>: &#123;<span class="string">'坏'</span>: <span class="string">'低'</span>, <span class="string">'好'</span>: <span class="string">'低'</span>&#125;&#125;&#125;&#125;&#125;&#125;</div></pre></td></tr></table></figure>
-<p>​    这样的结果就很不方便人们观看，而且不易于理解，现在将这个结果利用Matplotlib库来绘制树形图。Matplotlib是一个功能很强大的绘图库，主要用于二维绘图。</p>
-<p>​    绘制一棵树需要知道有多少个叶节点来确定<em>x</em>轴长度，需要知道树有多少层来确定<em>y</em>轴的长度。在这里定义两个函数getNumLeafs()和getTreeDepth(),来获取叶节点数目和层数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getNumLeafs</span><span class="params">(myTree)</span>:</span> <span class="comment">#计算叶子节点数</span></div><div class="line">    numLeafs = <span class="number">0</span></div><div class="line">    firstStr = myTree.keys()[<span class="number">0</span>] <span class="comment">#得到数的第一个值</span></div><div class="line">    secondDict = myTree[firstStr] <span class="comment">#划分之后对应的下一个值</span></div><div class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> secondDict.keys():</div><div class="line">        <span class="keyword">if</span> type(secondDict[key]).__name__==<span class="string">'dict'</span>:<span class="comment">#判断该值是否还是一个字典</span></div><div class="line">            numLeafs += getNumLeafs(secondDict[key])<span class="comment">#如果是，则继续递归其下面的叶子数量</span></div><div class="line">        <span class="keyword">else</span>:   numLeafs +=<span class="number">1</span>       <span class="comment">#如果不是则直接加1</span></div><div class="line">    <span class="keyword">return</span> numLeafs</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTreeDepth</span><span class="params">(myTree)</span>:</span> <span class="comment">#树的层数</span></div><div class="line">    maxDepth=<span class="number">0</span></div><div class="line">    firstStr=myTree.keys()[<span class="number">0</span>]</div><div class="line">    secondDict=myTree[firstStr]</div><div class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> secondDict.keys():</div><div class="line">        <span class="keyword">if</span> type(secondDict[key]).__name__==<span class="string">'dict'</span>:</div><div class="line">            thisDepth=<span class="number">1</span>+getTreeDepth(secondDict[key]) </div><div class="line">        <span class="keyword">else</span>:    thisDepth=<span class="number">1</span></div><div class="line">        <span class="keyword">if</span> thisDepth&gt;maxDepth:</div><div class="line">            maxDepth=thisDepth</div><div class="line">    <span class="keyword">return</span> maxDepth     <span class="comment">#求深度原理跟上述一样</span></div></pre></td></tr></table></figure>
-<p>​    在上述程序的两个函数拥有相同的结构，使用type()函数来判断子节点是否为字典类型。如果子节点是字典类型，则该节点也是一个判断节点，需要递归调用getNumLeafs()和getTreeDepth()函数，两个函数的结束条件都是叶子节点，一旦到达叶子节点，则从递归调用中返回。</p>
-<p>​    下面的程序用来构建一个完整的决策树</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="comment">#这部分程序使用文本注解绘制树节点</span></div><div class="line">decisionNode=dict(boxstyle=<span class="string">"sawtooth"</span>,fc=<span class="string">"0.8"</span>)</div><div class="line">leafNode=dict(boxstyle=<span class="string">"round4"</span>,fc=<span class="string">"0.8"</span>) <span class="comment">#boxstyle为文本框类型，fc为线粗细</span></div><div class="line">arrow_args=dict(arrowstyle=<span class="string">"&lt;-"</span>)       <span class="comment">#前面三句定义了文本框和箭头格式</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotNode</span><span class="params">(nodeTxt,centerPt,parentPt,nodeType)</span>:</span></div><div class="line">    createPlot.ax1.annotate(nodeTxt,xy=parentPt,xycoords=<span class="string">'axes fraction'</span>,</div><div class="line">                            xytext=centerPt,textcoords=<span class="string">'axes fraction'</span>,</div><div class="line">                            va=<span class="string">"center"</span>,ha=<span class="string">"center"</span>,bbox=nodeType,arrowprops=arrow_args)</div><div class="line">        <span class="comment"># nodeTxt是注释的字符,xy是被注释的点的位置，xytext是注释文本的位置</span></div><div class="line">    <span class="comment"># xycoords和textcoords是字符串，指示xy和xytext的坐标关系</span></div><div class="line">    </div><div class="line"><span class="comment">#下面这部分程序计算叶子节点数和树的层数</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getNumLeafs</span><span class="params">(myTree)</span>:</span> <span class="comment">#计算叶子节点数</span></div><div class="line">    numLeafs = <span class="number">0</span></div><div class="line">    firstSides = list(myTree.keys()) <span class="comment">#得到数的第一个值</span></div><div class="line">    firstStr = firstSides[<span class="number">0</span>]</div><div class="line">    secondDict = myTree[firstStr] <span class="comment">#划分之后对应的下一个值</span></div><div class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> secondDict.keys():</div><div class="line">        <span class="keyword">if</span> type(secondDict[key]).__name__==<span class="string">'dict'</span>:<span class="comment">#判断该值是否还是一个字典</span></div><div class="line">            numLeafs += getNumLeafs(secondDict[key])<span class="comment">#如果是，则继续递归其下面的叶子数量</span></div><div class="line">        <span class="keyword">else</span>:   numLeafs +=<span class="number">1</span>       <span class="comment">#如果不是则直接加1</span></div><div class="line">    <span class="keyword">return</span> numLeafs</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTreeDepth</span><span class="params">(myTree)</span>:</span> <span class="comment">#树的层数</span></div><div class="line">    maxDepth=<span class="number">0</span></div><div class="line">    firstSides=list(myTree.keys())</div><div class="line">    firstStr = firstSides[<span class="number">0</span>]</div><div class="line">    secondDict = myTree[firstStr]</div><div class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> secondDict.keys():</div><div class="line">        <span class="keyword">if</span> type(secondDict[key]).__name__==<span class="string">'dict'</span>:</div><div class="line">            thisDepth=<span class="number">1</span>+getTreeDepth(secondDict[key]) </div><div class="line">        <span class="keyword">else</span>:    thisDepth=<span class="number">1</span></div><div class="line">        <span class="keyword">if</span> thisDepth&gt;maxDepth:</div><div class="line">            maxDepth=thisDepth</div><div class="line">    <span class="keyword">return</span> maxDepth     <span class="comment">#求深度原理跟上述一样</span></div><div class="line"></div><div class="line"><span class="comment"># plotMidText方法在节点之间填充文本信息</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotMidText</span><span class="params">(cntrPt,parentPt,txtString)</span>:</span></div><div class="line">    xMid=(parentPt[<span class="number">0</span>]-cntrPt[<span class="number">0</span>])/<span class="number">2.0</span>+cntrPt[<span class="number">0</span>] <span class="comment">#求中间点横坐标</span></div><div class="line">    yMid=(parentPt[<span class="number">1</span>]-cntrPt[<span class="number">1</span>])/<span class="number">2.0</span>+cntrPt[<span class="number">1</span>] <span class="comment">#中间点纵坐标</span></div><div class="line">    createPlot.ax1.text(xMid,yMid,txtString) <span class="comment">#绘制中间节点</span></div><div class="line">    </div><div class="line"><span class="comment"># plotTree 计算宽与高</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotTree</span><span class="params">(myTree,parentPt,nodeTxt)</span>:</span></div><div class="line">    numLeafs=getNumLeafs(myTree)     <span class="comment">#叶子节点数</span></div><div class="line">    depth=getTreeDepth(myTree)     <span class="comment">#层数</span></div><div class="line">    firstSides=list(myTree.keys()) <span class="comment">#python3.6的字典不能直接用index所以要转换成list</span></div><div class="line">    firstStr = firstSides[<span class="number">0</span>] <span class="comment">#第一层键 </span></div><div class="line">    cntrPt=(plotTree.xOff+(<span class="number">1.0</span>+float(numLeafs))/<span class="number">2.0</span>/plotTree.totalW,plotTree.yOff)</div><div class="line">    <span class="comment">#用来选取中间点，计算节点的中心位置</span></div><div class="line">    plotMidText(cntrPt,parentPt,nodeTxt) </div><div class="line">    plotNode(firstStr,cntrPt,parentPt,decisionNode) <span class="comment">#标记子节点属性值</span></div><div class="line">    secondDict=myTree[firstStr] <span class="comment">#获取下一层的值</span></div><div class="line">    plotTree.yOff=plotTree.yOff<span class="number">-1.0</span>/plotTree.totalD <span class="comment">#减少y偏移</span></div><div class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> secondDict.keys():</div><div class="line">        <span class="keyword">if</span> type(secondDict[key]).__name__==<span class="string">'dict'</span>:</div><div class="line">            plotTree(secondDict[key],cntrPt,str(key)) <span class="comment">#继续递归</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            plotTree.xOff=plotTree.xOff+<span class="number">1.0</span>/plotTree.totalW <span class="comment">#叶子节点横坐标</span></div><div class="line">            plotNode(secondDict[key],(plotTree.xOff,plotTree.yOff),</div><div class="line">                     cntrPt,leafNode)  <span class="comment">#绘制叶子结点</span></div><div class="line">            plotMidText((plotTree.xOff,plotTree.yOff),cntrPt,str(key)) <span class="comment">#继续绘制结点中间的标签</span></div><div class="line">    plotTree.yOff=plotTree.yOff+<span class="number">1.0</span>/plotTree.totalD</div><div class="line"></div><div class="line"><span class="comment">#下面这个方法是主程序，调用了上面的方法</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">createPlot</span><span class="params">(inTree)</span>:</span></div><div class="line">    fig = plt.figure(<span class="number">1</span>, facecolor=<span class="string">'white'</span>)</div><div class="line">    fig.clf()</div><div class="line">    axprops = dict(xticks=[], yticks=[])</div><div class="line">    createPlot.ax1 = plt.subplot(<span class="number">111</span>, frameon=<span class="keyword">False</span>, **axprops)    </div><div class="line">    createPlot.ax1 = plt.subplot(<span class="number">111</span>, frameon=<span class="keyword">False</span>)  </div><div class="line">    plotTree.totalW = float(getNumLeafs(inTree)) <span class="comment">#宽度</span></div><div class="line">    plotTree.totalD = float(getTreeDepth(inTree)) <span class="comment">#高度</span></div><div class="line">    plotTree.xOff = <span class="number">-0.5</span>/plotTree.totalW;  <span class="comment">#起始横坐标</span></div><div class="line">    plotTree.yOff = <span class="number">1.0</span>;  <span class="comment">#起始纵坐标</span></div><div class="line">    plotTree(inTree, (<span class="number">0.5</span>,<span class="number">1.0</span>), <span class="string">''</span>)</div><div class="line">    plt.show()</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">createPlot(dataTree)</div></pre></td></tr></table></figure>
-<p>​    结果如下：</p>
-<p><img src="http://osuwf4wm7.bkt.clouddn.com/e.jpg" alt="tree"></p>
-<p>​    这样就比前面的  {‘是否周末’: {‘是’: {‘天气’: {‘好’: ‘高’, ‘坏’: {‘是否有促销’: {‘是’: ‘高’, ‘否’: ‘低’}}}}, ‘否’: {‘是否有促销’: {‘是’: {‘天气’: {‘好’: ‘高’, ‘坏’: ‘低’}}, ‘否’: {‘天气’: {‘坏’: ‘低’, ‘好’: ‘低’}}}}}} 直观很多。</p>
-<p>​    其实python里面有一个库可以直接调用出决策树的方法，程序如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line">filename=<span class="string">'C:\data_code\chapter5\demo\data\sales_data.xls'</span></div><div class="line">data=pd.read_excel(filename,index_col=<span class="string">u'序号'</span>)</div><div class="line">data[data==<span class="string">u'好'</span>]=<span class="number">1</span></div><div class="line">data[data==<span class="string">u'高'</span>]=<span class="number">1</span></div><div class="line">data[data==<span class="string">u'是'</span>]=<span class="number">1</span></div><div class="line">data[data!=<span class="number">1</span>]=<span class="number">-1</span></div><div class="line">x=data.iloc[:,:<span class="number">3</span>].as_matrix().astype(int)</div><div class="line">y=data.iloc[:,<span class="number">3</span>].as_matrix().astype(int)       </div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier <span class="keyword">as</span> DTC</div><div class="line">dtc=DTC(criterion=<span class="string">'entropy'</span>)  <span class="comment">#建立决策树模型，基于信息熵</span></div><div class="line">dtc.fit(x,y) </div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> export_graphviz <span class="comment">#导入相关函数，可视化决策树</span></div><div class="line"><span class="keyword">from</span> sklearn.externals.six <span class="keyword">import</span> StringIO </div><div class="line">x=pd.DataFrame(x)</div><div class="line"><span class="keyword">with</span> open(<span class="string">"tree.dot"</span>,<span class="string">'w'</span>)<span class="keyword">as</span> f:</div><div class="line">    f=export_graphviz(dtc,feature_names=x.columns,out_file=f)</div></pre></td></tr></table></figure>
-<p>​    这里会生成一个tree.dot的文件，需要安装Graphvia才能将它转换为pdf或png等格式。</p>
-<p>​    由于输出包含中文，要用文本编辑器在文件中制定中文字体，添加下面语句</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">edge[fontname=&quot;SimHei&quot;];       </div><div class="line">node[fontname=&quot;SimHei&quot;];</div></pre></td></tr></table></figure>
-<p>​    生成的决策树如下</p>
-<p><img src="http://osuwf4wm7.bkt.clouddn.com/tree.jpg" alt="tree"></p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>​    在本文，我只描述了ID3算法，C4.5和CART算法会在以后详细描述，上面的构建决策树之后因为会出现过拟合的情况，可以对一些没有必要的分支去掉，这个过程称为剪枝，这个过程也会在以后描述。决策树分类器具有分类快的特点，它就像带有终止块的流程图，终止块表示分类结果，前面的一篇KNN算法和决策树都是分类算法，讨论都是结果确定的分类算法，以后还会学习一些算法，这些算法将不能完全确定数据实例应该划分到某个分类。</p>
-<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><p>[1] 机器学习实战.Peter Harrington.</p>
-<p>[2] 2012.李航.统计学习方法</p>
-<p>[3] Python数据分析与挖掘实战.张良均.王路等</p>
+            <h1 id="自己大一喝醉时在宿舍说了啥"><a href="#自己大一喝醉时在宿舍说了啥" class="headerlink" title="自己大一喝醉时在宿舍说了啥"></a>自己大一喝醉时在宿舍说了啥</h1><p>原来说的是高考这事。现在回想高考，那是我人生中第一次觉得有些事未必付出与收获成正比。反思的过程总是痛苦的，或许当时的自己太骄傲了，骄傲得有点狂妄，所以自吃恶果那时必然的。哈哈，那才是真正的苏定邦呀!不过高考最大的收获是让我改变了执着与挫折的看法。当你觉得你付出太多但结果却得不到的东西你会将你的行为归为执着，把结果认为是挫折。其实不然，换个角度想如果作为一名大学生连这种基本的心里承受压力的能力和解决问题能力都没有，我并不觉得他是执着，那只是弱者对现实中一种逃避的方式罢了。只有当一个人遇到问题，能静下心来解决思考，纵使结果如何，我觉得过程都是美好的，收获都是最大的。</p>
+<p>生活中总遇到喜欢比较的同学，比较内容或是成绩，或是家庭条件等等。那比较的意义何在呢？赢了精神上的享受？还是物质上的收获？输了呢？不不不，这些根本对你的最后结果早不成影响。so与其生活在惶惶不可终日的比较中，为何不把这些花在“战胜别人的时间”用作提升自我。</p>
+<p>临近实习就业阶段，虽然自己就读与二本院校，与985 211相比那简直是被甩好几个档次。但二本学校能做的事情也很多很多，只是缺少一个平台。不过现在的我相信，只要你付出得足够多，收获总不会每次都不成正比。或许高考欠你的，就实习工作等等人生阶段中会统统还给你呢？所以嘛，人生需要自信。所以嘛穷则变，变则通。或许美好的结果我相信也在不远的地方等我。或许邦哥那天摇身一变成为高富帅了呢？</p>
+<p>2017-6-12 有感而发。</p>
 
           
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -945,274 +1309,10 @@
         <div class="post-eof"></div>
       
     </footer>
-  </article>
-
-
-    
-      
-
-  
-
+  </div>
   
   
   
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://donggn.github.io/2017/07/05/K-近邻算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/image/cat.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dongg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/05/K-近邻算法/" itemprop="url">K近邻算法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-05T15:57:36+08:00">
-                2017-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="k近邻算法："><a href="#k近邻算法：" class="headerlink" title="k近邻算法："></a><em>k</em>近邻算法：</h2><p>在给定一个训练数据集，对新的输入实例，在训练数据集中找到与该实例最邻近的<em>k</em>个实例，这<em>k</em>个实例的多数属于某个类，就把输入实例分为这个类。下面简述<em>k</em>近邻算法。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h3><p>训练数据集<br>$$<br>T={(x_1,y_1),(x_2,y_2),···,(x_n,y_n)}<br>$$<br>其中<br>$$<br>x_i\in{X}\subseteq{R^n} 为实例的特征向量,y_i\in{Y}={c_1,c_2,···,c_k}为实例的类别，i=1,2,3,···,N；<br>$$<br>实例特征向量<em>x</em>;</p>
-<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><p>实例<em>x</em>所属的类<em>y</em>.</p>
-<ul>
-<li>$$<br>根据给定的距离度量（比如欧式距离），在训练集T中找出与x最邻近的k个点<br>$$</li>
-</ul>
-<ul>
-<li>$$<br>涵盖这k个点的x的邻域记作N_k(x)，在 N_k(x)中根据类决策规则（如多数表决）决定x的类别y:<br>$$</li>
-</ul>
-<p>$$<br>y=arg \max_{c_j} \sum_{x\in{N_k(x)}} I(y_i=c_j) ，i=1,2，···，N；j=1,2，···，K<br>$$</p>
-<p>$$<br>I 为指示函数，即当y_i=c_j 时I为1，否则I为0.<br>$$</p>
-<h3 id="在这里我们只详细描述一下距离度量："><a href="#在这里我们只详细描述一下距离度量：" class="headerlink" title="在这里我们只详细描述一下距离度量："></a>在这里我们只详细描述一下距离度量：</h3><p>特征空间中两个实例点的距离是两个实例点相似程度的反映，k近邻模型的特征空间一般是n维实数向量空间R^n^，其中有三种距离是比较常见的，比如欧式距离，曼哈顿距离。<br>$$<br>设特征空间X是n维实数向量空间R^n<br>$$</p>
-<p>$$<br>x_i,x_j\in{X},x_i=(x^1_i,x_i^2,···, x_i^n)^T,x_j=(x^1_j,x^2_j,···,x^n_j)^T,x_i,x_j的距离定义为<br>$$</p>
-<p>​<br>$$<br>L_p(x_i,x_j)=(\sum_{l=1}^n|x_i^l-x_j^l|^p)^\frac{1}{P}<br>$$</p>
-<p>$$<br>当p=2时，称为欧式距离，当p=1时，称为曼哈顿距离，当p=\infty时，它是各个坐标距离的最大值。<br>$$</p>
-<h3 id="接下来我们运用到实战："><a href="#接下来我们运用到实战：" class="headerlink" title="接下来我们运用到实战："></a>接下来我们运用到实战：</h3><p>首先，既然是knn分类，我们首先应该构建一个KNN算法的分类器，其伪代码如下:</p>
-<p>对于未知类别属性的数据集中的每个点进行如下操作：</p>
-<p>（1）计算已知类别数据集中的点与当前点之间的距离</p>
-<p>（2）按照距离递增次序排列</p>
-<p>（3）选取与当前点距离最小的k个点</p>
-<p>（4）请确定前k个点所在类别出现的频率</p>
-<p>（5）返回前k个点出现频率最高的类别作为当前点的预测分类</p>
-<p>其代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify0</span><span class="params">(inX,dataSet,labels,k)</span>:</span><span class="comment">#inX为输入样本，dataSet为样本数据集，labels为标签向量，k为用于选择最近邻的数目</span></div><div class="line">    dataSetSize=dataSet.shape[<span class="number">0</span>] <span class="comment">#得到样本长度</span></div><div class="line">    diffmat=np.tile(inX,(dataSetSize,<span class="number">1</span>))-dataSet <span class="comment">#tile重复int，dataSetSize为重复的行数，1为重复的列数</span></div><div class="line">    sqDiffmat=diffmat**<span class="number">2</span> <span class="comment">#将差开平方</span></div><div class="line">    saDistance=sqDiffmat.sum(axis=<span class="number">1</span>) <span class="comment">#相加起来</span></div><div class="line">    distances=saDistance**<span class="number">0.5</span> <span class="comment">#开根号</span></div><div class="line">    sortedDistIndices=distances.argsort()<span class="comment">#从小到大排序之后返回他们的索引值</span></div><div class="line">    classCount=&#123;&#125; <span class="comment">#创建一个空字典</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</div><div class="line">        voteIlabel=labels[sortedDistIndices[i]] <span class="comment">#得到每个索引值对应的类别</span></div><div class="line">        classCount[voteIlabel]=classCount.get(voteIlabel,<span class="number">0</span>)+<span class="number">1</span> <span class="comment">#得到每个类别的个数</span></div><div class="line">        sortedclassCount=sorted(classCount.items(),key=operator.itemgetter(<span class="number">1</span>),reverse=<span class="keyword">True</span>) </div><div class="line">        <span class="comment">#按classCount.items中的第二个参数从大到小排列</span></div></pre></td></tr></table></figure>
-<p> 创建好分类器之后，我们就要读取数据然后用这个分类器进行分类</p>
-<p>首先我们读取数据，在这里我选取的数据是比马印第安人糖尿病数据集（<a href="http://t.cn/RfaFfq8），我将其存放在txt文档中，里面有制表符换行符，所以我们要去除掉，并且定义两个变量，一个用来存储特征值，一个用来存储类别，代码如下：" target="_blank" rel="external">http://t.cn/RfaFfq8），我将其存放在txt文档中，里面有制表符换行符，所以我们要去除掉，并且定义两个变量，一个用来存储特征值，一个用来存储类别，代码如下：</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">fr=open(<span class="string">'D:\QQPCmgr\Desktop\ind.txt'</span>) </div><div class="line">arrayOLines=fr.readlines()  <span class="comment">#读取数据</span></div><div class="line">numberOfLines=len(arrayOLines)   <span class="comment">#得到数据长度</span></div><div class="line">returnMat=np.zeros((numberOfLines,<span class="number">8</span>))   <span class="comment">#创建一个空矩阵接下来用来储存特征值</span></div><div class="line">classLabelVector=[]      <span class="comment">#创建一个空列表用来储存类别</span></div><div class="line">index=<span class="number">0</span></div><div class="line"><span class="keyword">for</span> line <span class="keyword">in</span> arrayOLines:</div><div class="line">    line=line.strip()    <span class="comment">#去除换行符</span></div><div class="line">    listFromLine=line.split(<span class="string">'\t'</span>)     <span class="comment">#去除制表符</span></div><div class="line">    returnMat[index,:]=listFromLine[<span class="number">0</span>:<span class="number">8</span>]      <span class="comment">#将数据集的八个特征放入returnMat中</span></div><div class="line">    classLabelVector.append(int(listFromLine[<span class="number">-1</span>])) <span class="comment">#将类别放到classLabelVector中</span></div><div class="line">    index+=<span class="number">1</span></div></pre></td></tr></table></figure>
-<p>读取完数据后，我们可以输入returnMat，得到这样的一个存储了特征值的数据集</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> array</div><div class="line">([[   <span class="number">6.</span>   ,  <span class="number">148.</span>   ,   <span class="number">72.</span>   , ...,   <span class="number">33.6</span>  ,    <span class="number">0.627</span>,   <span class="number">50.</span>   ], </div><div class="line">  [   <span class="number">1.</span>   ,   <span class="number">85.</span>   ,   <span class="number">66.</span>   , ...,   <span class="number">26.6</span>  ,    <span class="number">0.351</span>,   <span class="number">31.</span>   ],</div><div class="line">  [   <span class="number">8.</span>   ,  <span class="number">183.</span>   ,   <span class="number">64.</span>   , ...,   <span class="number">23.3</span>  ,    <span class="number">0.672</span>,   <span class="number">32.</span>   ],</div><div class="line">  ..., </div><div class="line">  [   <span class="number">5.</span>   ,  <span class="number">121.</span>   ,   <span class="number">72.</span>   , ...,   <span class="number">26.2</span>  ,    <span class="number">0.245</span>,   <span class="number">30.</span>   ],</div><div class="line">  [   <span class="number">1.</span>   ,  <span class="number">126.</span>   ,   <span class="number">60.</span>   , ...,   <span class="number">30.1</span>  ,    <span class="number">0.349</span>,   <span class="number">47.</span>   ],</div><div class="line">  [   <span class="number">1.</span>   ,   <span class="number">93.</span>   ,   <span class="number">70.</span>   , ...,   <span class="number">30.4</span>  ,    <span class="number">0.315</span>,   <span class="number">23.</span>   ]])</div></pre></td></tr></table></figure>
-<p>观察发现，有些特征的取值较小，有些特征的取值较大，在计算距离的时候，特征取值范围较大的差值会更大，这对计算结果影响会更大，但是我们认为这里数据中的每一个特征值都是同等重要，即每一个特征值对于结果的影响都是一样的，所以我们要将数据归一化。</p>
-<p>归一化数据就是用数据集减去最小特征值然后再除以最大特征值跟最小特征值的差值，其代码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">minVals=returnMat.min(<span class="number">0</span>)</div><div class="line">maxVals=returnMat.max(<span class="number">0</span>)</div><div class="line">ranges=maxVals-minVals</div><div class="line">normDataSet=np.zeros(np.shape(returnMat))</div><div class="line">m=returnMat.shape[<span class="number">0</span>]</div><div class="line">normDataSet=returnMat-np.tile(minVals,(m,<span class="number">1</span>))  <span class="comment">#减去最小值</span></div><div class="line">normDataSet=normDataSet/np.tile(ranges,(m,<span class="number">1</span>)) <span class="comment">#除以最大值减去最小值</span></div><div class="line"><span class="comment">#将归一化后的数据存储到normDataSet中，方便接下来使用</span></div></pre></td></tr></table></figure>
-<p>来我们看一下结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">array</div><div class="line">( [[<span class="number">0.35294118</span>,  <span class="number">0.74371859</span>,  <span class="number">0.59016393</span>, ...,  <span class="number">0.50074516</span>,                          <span class="number">0.23441503</span>,<span class="number">0.48333333</span>],</div><div class="line">   [ <span class="number">0.05882353</span>,  <span class="number">0.42713568</span>,  <span class="number">0.54098361</span>, ...,  <span class="number">0.39642325</span>,</div><div class="line">     <span class="number">0.11656704</span>,  <span class="number">0.16666667</span>],</div><div class="line">   [ <span class="number">0.47058824</span>,  <span class="number">0.91959799</span>,  <span class="number">0.52459016</span>, ...,  <span class="number">0.34724292</span>,</div><div class="line">     <span class="number">0.25362938</span>,  <span class="number">0.18333333</span>],</div><div class="line">   ..., </div><div class="line">   [ <span class="number">0.29411765</span>,  <span class="number">0.6080402</span> ,  <span class="number">0.59016393</span>, ...,  <span class="number">0.390462</span>  ,</div><div class="line">     <span class="number">0.07130658</span>,  <span class="number">0.15</span>      ],</div><div class="line">   [ <span class="number">0.05882353</span>,  <span class="number">0.63316583</span>,  <span class="number">0.49180328</span>, ...,  <span class="number">0.4485842</span> ,</div><div class="line">     <span class="number">0.11571307</span>,  <span class="number">0.43333333</span>],</div><div class="line">   [ <span class="number">0.05882353</span>,  <span class="number">0.46733668</span>,  <span class="number">0.57377049</span>, ...,  <span class="number">0.45305514</span>,</div><div class="line">     <span class="number">0.10119556</span>,  <span class="number">0.03333333</span>]])</div></pre></td></tr></table></figure>
-<p>normDataSet中的数据全部都是0-1间，这样每一个特征值对结果的影响大概也就一样了。</p>
-<p>数据我们准备好之后，接下来就要应用到分类器中，我们首先选取百分之十的测试样本数据集，对其进行分类，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">hoRatio=<span class="number">0.10</span> <span class="comment">#选取百分之十来测试分类器</span></div><div class="line">m=normDataSet.shape[<span class="number">0</span>] <span class="comment">#这个是数据集的长度</span></div><div class="line">numTestVecs=int(m*hoRatio)  </div><div class="line">errorCount=<span class="number">0.0</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(numTestVecs):</div><div class="line">    classifierResult=classify0(normDataSet[i,:],normDataSet[numTestVecs:m,:],classLabelVector[numTestVecs:m],<span class="number">3</span>)</div><div class="line">    <span class="comment"># 输入样本选取前numTestVecs行的数据集，样本数据集选取numTestVecs行以后的数据集，标签也是选取以后的数据集，k=3</span></div><div class="line">    <span class="keyword">print</span> (<span class="string">"the classifier came back with:%d,the real answer is:%d"</span>%(classifierResult,classLabelVector[i]))</div><div class="line">    <span class="keyword">if</span> (classifierResult!=classLabelVector[i]):</div><div class="line">        errorCount+=<span class="number">1.0</span></div><div class="line">print(<span class="string">"the total error rate is:%f"</span>%(errorCount/float(numTestVecs)))</div></pre></td></tr></table></figure>
-<p>代码中还设置了一个errotCount来增加分类的错误率，分类的结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">the classifier came back <span class="keyword">with</span>:<span class="number">1</span>,the real answer <span class="keyword">is</span>:<span class="number">1</span></div><div class="line">the classifier came back <span class="keyword">with</span>:<span class="number">0</span>,the real answer <span class="keyword">is</span>:<span class="number">0</span></div><div class="line">the classifier came back <span class="keyword">with</span>:<span class="number">1</span>,the real answer <span class="keyword">is</span>:<span class="number">1</span></div><div class="line">·····</div><div class="line">the classifier came back <span class="keyword">with</span>:<span class="number">0</span>,the real answer <span class="keyword">is</span>:<span class="number">0</span></div><div class="line">the classifier came back <span class="keyword">with</span>:<span class="number">0</span>,the real answer <span class="keyword">is</span>:<span class="number">0</span></div><div class="line">the total error rate <span class="keyword">is</span>:<span class="number">0.355263</span></div></pre></td></tr></table></figure>
-<p>错误率为0.355263，分类的准确度较高，分类器的分类效果可以接受。</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>K近邻算法是分类数据比较简单的一个算法，是基于实例的学习，所以K近邻算法高正确率的要求就是使用算法时我们必须要有接近实际数据的训练样本数据，k-近邻算法必须保存全部数据集，如果训练数据集很大将会使用大量的存储空间，而且要对每个数据计算距离值，所以实际使用中耗时很大。</p>
-<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><p>[1] 机器学习实战.Peter Harrington.</p>
-<p>[2] 2012.李航.统计学习方法</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://donggn.github.io/2017/07/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/image/cat.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dongg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/05/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-05T14:52:35+08:00">
-                2017-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>怎么说呢，在jason的帮忙以及自己的努力下，总算用hexo搭建好了自己的博客，以后会慢慢在这里写之前所学的东西。</p>
-<p>先感谢下jason，作为一个小白，问题可能会有点简单和多，jason还是很耐心的帮助我解决问题，总之人很nice。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </article>
 
 
@@ -1241,6 +1341,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -1249,25 +1350,37 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/image/cat.png"
-               alt="dong" />
-          <p class="site-author-name" itemprop="name">dong</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
           
+            <img class="site-author-image" itemprop="image"
+              src="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg"
+              alt="bang" />
+          
+            <p class="site-author-name" itemprop="name">bang</p>
+            <p class="site-description motion-element" itemprop="description"></p>
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
+            
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+            
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
           
 
           
@@ -1312,23 +1425,26 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">dong</span>
+  <span class="author" itemprop="copyrightHolder">bang</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
 
 
         
+
+
+
+
+
+
 
         
       </div>
@@ -1394,32 +1510,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -1446,10 +1562,6 @@
   
 
 
-
-
-
-  
 
 
 

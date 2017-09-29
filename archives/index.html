@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,6 +10,7 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
@@ -21,6 +22,7 @@
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -74,7 +76,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -86,7 +88,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -94,11 +96,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="dongg">
-<meta property="og:url" content="https://donggn.github.io/archives/index.html">
-<meta property="og:site_name" content="dongg">
+<meta property="og:title" content="bang1318">
+<meta property="og:url" content="https://sudingbang.github.io/archives/index.html">
+<meta property="og:site_name" content="bang1318">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dongg">
+<meta name="twitter:title" content="bang1318">
 
 
 
@@ -107,9 +109,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -126,20 +130,14 @@
 
 
 
-  <link rel="canonical" href="https://donggn.github.io/archives/"/>
+  <link rel="canonical" href="https://sudingbang.github.io/archives/"/>
 
 
 
 
 
-  <title>归档 | dongg</title>
+  <title>归档 | bang1318</title>
   
-
-
-
-
-
-
 
 
 
@@ -157,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -168,12 +166,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">dongg</span>
+        <span class="site-title">bang1318</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">bang_blog</p>
       
   </div>
 
@@ -203,6 +201,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -213,8 +221,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+          <a href="/404/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -241,42 +259,46 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-    <span class="archive-page-counter">
-      
-      
-      
+      <span class="archive-page-counter">
         
-      
-      嗯..! 目前共计 5 篇日志。 继续努力。
-    </span>
-
-    
-
-      
-      
-      
-
-      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
+        
+          
+        
+        嗯..! 目前共计 6 篇日志。 继续努力。
+      </span>
 
       
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2017">2017</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/17/oracle数据库学习笔记（二）/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/16/002/" itemprop="url">
               
-                <span itemprop="name">oracle数据库学习笔记（二）</span>
+                <span itemprop="name">实习那件小事</span>
               
             </a>
         
@@ -284,9 +306,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-17T15:24:35+08:00"
-              content="2017-07-17" >
-          07-17
+              datetime="2017-08-16T15:20:12+08:00"
+              content="2017-08-16" >
+          08-16
         </time>
       </div>
 
@@ -295,25 +317,25 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/14/oracle数据库学习笔记（一）/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/12/Logistic-1/" itemprop="url">
               
-                <span itemprop="name">oracle数据库学习笔记(一)</span>
+                <span itemprop="name">Logistic模型的初步认识</span>
               
             </a>
         
@@ -321,9 +343,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-14T15:14:13+08:00"
-              content="2017-07-14" >
-          07-14
+              datetime="2017-08-12T23:17:05+08:00"
+              content="2017-08-12" >
+          08-12
         </time>
       </div>
 
@@ -332,97 +354,23 @@
 
 
 
-    
-
-      
-      
       
 
-      
-      
+        
+        
+        
 
-      
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/08/决策树/" itemprop="url">
-              
-                <span itemprop="name">决策树</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-08T22:17:49+08:00"
-              content="2017-07-08" >
-          07-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/05/K-近邻算法/" itemprop="url">
-              
-                <span itemprop="name">K近邻算法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-05T15:57:36+08:00"
-              content="2017-07-05" >
-          07-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/05/hello-world/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/10/hello-world/" itemprop="url">
               
                 <span itemprop="name">Hello World</span>
               
@@ -432,9 +380,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-05T14:52:35+08:00"
-              content="2017-07-05" >
-          07-05
+              datetime="2017-08-10T15:20:12+08:00"
+              content="2017-08-10" >
+          08-10
         </time>
       </div>
 
@@ -443,9 +391,124 @@
 
 
 
-    
+      
 
-  </section>
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/08/01/oracle002/" itemprop="url">
+              
+                <span itemprop="name">入门Oracle（二）</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-01T20:43:42+08:00"
+              content="2017-08-01" >
+          08-01
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/08/01/oracle001/" itemprop="url">
+              
+                <span itemprop="name">入门Oracle（一）</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-01T20:40:42+08:00"
+              content="2017-08-01" >
+          08-01
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/06/12/001/" itemprop="url">
+              
+                <span itemprop="name">My life</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-06-12T23:50:42+08:00"
+              content="2017-06-12" >
+          06-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+    </div>
+  </div>
+  
+  
+  
 
   
 
@@ -470,6 +533,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -478,25 +542,37 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/image/cat.png"
-               alt="dong" />
-          <p class="site-author-name" itemprop="name">dong</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
           
+            <img class="site-author-image" itemprop="image"
+              src="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140904/upload/201409/mvohjqhsgu5jpg.jpg"
+              alt="bang" />
+          
+            <p class="site-author-name" itemprop="name">bang</p>
+            <p class="site-description motion-element" itemprop="description"></p>
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
+            
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+            
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
           
 
           
@@ -541,23 +617,26 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">dong</span>
+  <span class="author" itemprop="copyrightHolder">bang</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
 
 
         
+
+
+
+
+
+
 
         
       </div>
@@ -623,34 +702,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
   
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
   
 
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -677,10 +754,6 @@
   
 
 
-
-
-
-  
 
 
 
